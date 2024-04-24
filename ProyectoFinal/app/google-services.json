@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1054585184732",
+    "project_id": "uppercutu-6534e",
+    "storage_bucket": "uppercutu-6534e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1054585184732:android:6aac313b4835ac96c5af19",
+        "android_client_info": {
+          "package_name": "com.example.uppercutu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOyfOscAVwe_7DZqmTM8YTAEPiBcSurU8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
