@@ -10,12 +10,16 @@ import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import com.example.uppercutu.fragments.HomeFragment
+import com.example.uppercutu.fragments.VotarFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        setup()
     }
 
 
@@ -24,8 +28,8 @@ class MainActivity : AppCompatActivity() {
      */
     private fun setup() {
         initBottomNavigationViewAndFragments()
-        initDrawerLayout()
-        checkProfilePic()
+//        initDrawerLayout()
+
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -58,7 +62,7 @@ class MainActivity : AppCompatActivity() {
      * Infla el menú de opciones en la barra de herramientas.
      */
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.options_menu, menu)
+        menuInflater.inflate(R.menu.bottom_nav_menu, menu)
         return true
     }
 
@@ -69,8 +73,9 @@ class MainActivity : AppCompatActivity() {
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottomNavigationView)
 
         val fragmentHome = HomeFragment()
-        val fragmentExplore = ExploreFragment()
-        val fragmentUser = UserFragment()
+        val votarFragment = VotarFragment()
+//        val fragmentExplore = ExploreFragment()
+//        val fragmentUser = UserFragment()
 
         replaceFragment(fragmentHome)
 
@@ -78,8 +83,9 @@ class MainActivity : AppCompatActivity() {
             val currentFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView)
             val newFragment = when (menuItem.itemId) {
                 R.id.page_home -> fragmentHome
-                R.id.page_explore -> fragmentExplore
-                R.id.page_user -> fragmentUser
+                R.id.page_votar -> votarFragment
+//                R.id.page_explore -> fragmentExplore
+//                R.id.page_user -> fragmentUser
                 else -> fragmentHome
             }
 

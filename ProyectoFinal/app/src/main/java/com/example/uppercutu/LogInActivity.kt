@@ -12,14 +12,17 @@ import com.example.uppercutu.firebase.FirebaseInitializer
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.firestore.FirebaseFirestore
-
+enum class ProviderType {
+    BASIC,
+    GOOGLE
+}
 class LogInActivity : AppCompatActivity(){
 
     private val firestore: FirebaseFirestore = FirebaseInitializer.firestoreInstance
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_log_in)
+        setContentView(R.layout.activity_login)
 
         setup()
     }

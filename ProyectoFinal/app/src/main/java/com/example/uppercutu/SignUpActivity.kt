@@ -11,7 +11,6 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.uppercutu.firebase.FirebaseInitializer
 import com.example.uppercutu.firebase.FirestoreUtilities
-import com.example.uppercutu.fragments.ProviderType
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.firestore.FirebaseFirestore
@@ -135,7 +134,7 @@ class SignUpActivity:AppCompatActivity() {
      */
     private fun guardarDatos(email: String, provider: String, username : String, fullname: String) {
         // Guardado de datos
-        val prefs = getSharedPreferences(getString("com.example.uppercutu.PREFERENCE_FILE_KEY"), Context.MODE_PRIVATE).edit()
+        val prefs = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
         prefs.putString("email", email)
         prefs.putString("provider", provider)
         prefs.putString("username", username)

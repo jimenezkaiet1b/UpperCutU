@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/toolbarMenu_themeMenu"
+        android:icon="@drawable/outline_brightness_6_24"
+        android:title="Theme"
+        app:iconTint="?attr/colorOnPrimary"
+        app:showAsAction="ifRoom" />
+</menu>
