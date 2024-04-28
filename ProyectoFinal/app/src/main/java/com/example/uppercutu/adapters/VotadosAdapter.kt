@@ -1,3 +1,5 @@
+package com.example.uppercutu.adapters
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,6 +30,8 @@ class VotadosAdapter(private val votadosList: List<Votados>) :
         holder.tituloTextView.text = currentItem.titulo
         holder.descripcionTextView.text = currentItem.descripcion
         holder.fechaCreacionTextView.text = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(currentItem.fechaCreacion)
+
+
     }
 
     override fun getItemCount() = votadosList.size

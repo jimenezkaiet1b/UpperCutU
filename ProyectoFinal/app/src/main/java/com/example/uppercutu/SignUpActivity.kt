@@ -4,6 +4,8 @@ import android.app.DatePickerDialog
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.os.Debug
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -16,7 +18,14 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.Calendar
 
-class SignUpActivity:AppCompatActivity() {
+/**
+ * Actividad para registrar una nueva cuenta de usuario.
+ *
+ * Permite a los usuarios crear una nueva cuenta proporcionando su correo electrónico, contraseña, nombre de usuario,
+ * nombre y apellidos, y fecha de nacimiento.
+ */
+class SignUpActivity : AppCompatActivity() {
+
     private val firestore: FirebaseFirestore = FirebaseInitializer.firestoreInstance
     private val auth: FirebaseAuth = FirebaseInitializer.authInstance
 
@@ -43,8 +52,9 @@ class SignUpActivity:AppCompatActivity() {
         val bornDateEditText = findViewById<EditText>(R.id.signUp_bornDateEditText)
         val signUpButton: Button = findViewById(R.id.signUp_signUpButton)
         val returnButton: Button = findViewById(R.id.signUp_returnButton)
-
+        Log.d("KAIET", "NO CLIKCAO")
         signUpButton.setOnClickListener {
+            Log.d("KAIET", "SI CKIAO")
             if (emailEditText.text.isNotEmpty() && passwordEditText.text.isNotEmpty() && usernameEditText.text.isNotEmpty()) {
                 if (passwordEditText.text.toString().length > 6) {
                     val username = usernameEditText.text.toString()
@@ -62,7 +72,9 @@ class SignUpActivity:AppCompatActivity() {
                                 ).addOnCompleteListener { task ->
                                     if (task.isSuccessful) {
                                         FirestoreUtilities.saveUserInFirestore(firestore, auth, usernameEditText.text.toString(), emailEditText.text.toString(), nameEditText.text.toString() + " " + surnamesEditText.text.toString(),bornDateEditText.text.toString()) { success ->
+                                            Log.d("KAIET", "ANTES")
                                             if (success) {
+                                                Log.d("KAIET", "DESPUES")
                                                 FirestoreUtilities.createUserListEntryInFirestore(firestore, auth.currentUser?.email.toString())
                                                 guardarDatos(emailEditText.text.toString(), ProviderType.BASIC.toString(), usernameEditText.text.toString(), nameEditText.text.toString() + " " + surnamesEditText.text.toString())
                                                 showMain()
@@ -153,5 +165,4 @@ class SignUpActivity:AppCompatActivity() {
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
-
 }

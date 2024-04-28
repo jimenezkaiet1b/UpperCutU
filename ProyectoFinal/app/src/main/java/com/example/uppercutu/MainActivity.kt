@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.example.uppercutu.fragments.HomeFragment
+import com.example.uppercutu.fragments.UserFragment
 import com.example.uppercutu.fragments.VotarFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -21,16 +22,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         setup()
-    }
-
-    fun saveData(boxer1Name: String, boxer2Name: String, numberOfRounds: Int) {
-
-        val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        editor.putString("boxer1Name", boxer1Name)
-        editor.putString("boxer2Name", boxer2Name)
-        editor.putInt("numberOfRounds", numberOfRounds)
-        editor.apply()
     }
 
     /**
@@ -44,6 +35,11 @@ class MainActivity : AppCompatActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.title = null
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.options_menu, menu)
+        return true
     }
 
     /**
@@ -68,13 +64,7 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    /**
-     * Infla el menú de opciones en la barra de herramientas.
-     */
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.bottom_nav_menu, menu)
-        return true
-    }
+
 
     /**
      * Inicializa la barra de navegación inferior y los fragmentos asociados.
@@ -85,7 +75,7 @@ class MainActivity : AppCompatActivity() {
         val fragmentHome = HomeFragment()
         val votarFragment = VotarFragment()
 //        val fragmentExplore = ExploreFragment()
-//        val fragmentUser = UserFragment()
+        val fragmentUser = UserFragment()
 
         replaceFragment(fragmentHome)
 
@@ -95,7 +85,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.page_home -> fragmentHome
                 R.id.page_votar -> votarFragment
 //                R.id.page_explore -> fragmentExplore
-//                R.id.page_user -> fragmentUser
+                R.id.page_trofeo -> fragmentUser
                 else -> fragmentHome
             }
 
@@ -106,6 +96,7 @@ class MainActivity : AppCompatActivity() {
             true
         }
     }
+
 
 
     /**

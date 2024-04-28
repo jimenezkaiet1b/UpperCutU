@@ -57,6 +57,9 @@ dependencies {
     implementation("de.hdodenhof:circleimageview:3.1.0")
 
     implementation ("com.google.android.material:material:1.11.0")
+    // librerias de Basefuego
+    // https://firebase.google.com/docs/android/setup#available-libraries
+
     // Firebase BoM
     implementation(platform("com.google.firebase:firebase-bom:32.7.1"))
 
@@ -74,5 +77,12 @@ dependencies {
 
     //Firebase Storage
     implementation("com.google.firebase:firebase-storage-ktx:20.3.0")
+
+    //okhttp
+    implementation("com.squareup.okhttp3:okhttp:4.9.2")
+
+    // Gson (Retrofit version)
+    // https://github.com/google/gson
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 
 }
