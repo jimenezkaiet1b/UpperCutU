@@ -1,5 +1,6 @@
 package com.example.uppercutu
 
+import android.content.Context
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -22,6 +23,15 @@ class MainActivity : AppCompatActivity() {
         setup()
     }
 
+    fun saveData(boxer1Name: String, boxer2Name: String, numberOfRounds: Int) {
+
+        val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString("boxer1Name", boxer1Name)
+        editor.putString("boxer2Name", boxer2Name)
+        editor.putInt("numberOfRounds", numberOfRounds)
+        editor.apply()
+    }
 
     /**
      * Configura la actividad.
@@ -120,4 +130,7 @@ class MainActivity : AppCompatActivity() {
 
         transaction.commit()
     }
+
+
+
 }

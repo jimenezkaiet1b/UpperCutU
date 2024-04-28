@@ -56,5 +56,23 @@ dependencies {
     //https://github.com/hdodenhof/CircleImageView
     implementation("de.hdodenhof:circleimageview:3.1.0")
 
+    implementation ("com.google.android.material:material:1.11.0")
+    // Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:32.7.1"))
+
+    // Firebase analytics
+    implementation("com.google.firebase:firebase-analytics")
+
+    // Firebase Authentication
+    implementation("com.google.firebase:firebase-auth")
+
+    // Firebase Authentication with Play Services
+    implementation("com.google.android.gms:play-services-auth:21.0.0")
+
+    // Firebase Firestore
+    implementation("com.google.firebase:firebase-firestore-ktx")
+
+    //Firebase Storage
+    implementation("com.google.firebase:firebase-storage-ktx:20.3.0")
 
 }
