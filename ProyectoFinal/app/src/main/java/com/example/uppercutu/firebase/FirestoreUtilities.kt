@@ -1,5 +1,6 @@
 package com.example.uppercutu.firebase
 
+import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -15,27 +16,37 @@ object FirestoreUtilities {
      * @param birthDate Fecha de nacimiento del usuario en formato de cadena.
      * @param callback Función de retorno de llamada que indica si la operación fue exitosa o no.
      */
-    fun saveUserInFirestore(firestore: FirebaseFirestore, auth: FirebaseAuth, username: String, email: String, fullName: String, birthDate: String, callback: (Boolean) -> Unit) {
+    fun saveUserInFirestore(
+        firestore: FirebaseFirestore,
+        auth: FirebaseAuth,
+        username: String,
+        email: String,
+        fullName: String,
+        birthDate: String,
+        callback: (Boolean) -> Unit
+    ) {
         val currentUser = auth.currentUser
-        currentUser?.let { user ->// si el usuario actual no es nuulo ejecutamos el codigo que hay dentro
-            val userData = hashMapOf(//creamos un map donde guardamos los datos del usuario
-                "username" to username,
-                "email" to email,
+        currentUser?.let { user ->
+            val userData = hashMapOf(
+                "birthDate" to birthDate,
                 "fullName" to fullName,
-                "birthDate" to birthDate
-                //no guardamos contrasena en la base de datos ya que habria que crear metodo para cifrarla(si eso lo hacemos mas adelante) metodo creado abajo
+                "username" to username,
+                "email" to email
             )
 
-            firestore.collection("users").document(user.uid)//accedemos a la  collecion "users" y creamos un nuevo documento con el id del usauario
-                .set(userData)//Establecemos la informacion del usuario
-                .addOnSuccessListener {//este codigo se ejecutara si se ha guardado bien en nuestra base de datos Firesotre
+            firestore.collection("users").document(user.uid)
+                .set(userData)
+                .addOnSuccessListener {
                     callback(true)
                 }
-                .addOnFailureListener {
+                .addOnFailureListener { e ->
+                    // Captura cualquier error que ocurra al intentar guardar los datos en Firestore
+                    Log.e("Firestore", "Error al guardar el usuario en Firestore", e)
                     callback(false)
                 }
         }
     }
+
 
     /**
      * Crea una entrada de lista de usuario en Firestore.
