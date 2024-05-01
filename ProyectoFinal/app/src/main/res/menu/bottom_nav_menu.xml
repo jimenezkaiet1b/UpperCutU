@@ -4,14 +4,17 @@
     <item
         android:id="@+id/page_home"
         android:icon="@drawable/baseline_home_24"
-        android:title="Inicio" />
+        android:title="Inicio"
+        android:iconTint="?attr/colorPrimary"/>
     <item
         android:id="@+id/page_trofeo"
 
         android:icon="@drawable/trophy_silhouette_svgrepo_com"
-        android:title="Ranking" />
+        android:title="Ranking"
+        android:iconTint="?attr/colorPrimary"/>
     <item
         android:id="@+id/page_votar"
         android:icon="@drawable/baseline_back_hand_24"
-        android:title="Vota" />
+        android:title="Vota"
+        android:iconTint="?attr/colorPrimary"/>
 </menu>
