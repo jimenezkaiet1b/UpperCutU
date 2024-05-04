@@ -41,12 +41,14 @@ class CustomCartaPuntuaje : Fragment() {
     private fun setup(view: View) {
         val boxer1Name : EditText = view.findViewById(R.id.boxer1_name)
         val boxer2Name : EditText = view.findViewById(R.id.boxer2_name)
+        val rounds : Spinner = view.findViewById(R.id.number_of_rounds)
 
         val saveButton: Button = view.findViewById(R.id.save_button)
         saveButton.setOnClickListener {
             val boxer1NameText = boxer1Name.text.toString()
             val boxer2NameText = boxer2Name.text.toString()
-            onSaveClickListener.onSaveClicked(boxer1NameText, boxer2NameText, 3)
+            val rondas = rounds.selectedItem.toString().toInt()
+            onSaveClickListener.onSaveClicked(boxer1NameText, boxer2NameText,rondas )
             val fragmentManager = requireActivity().supportFragmentManager
             fragmentManager.popBackStack()
         }

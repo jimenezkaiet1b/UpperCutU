@@ -90,5 +90,12 @@ dependencies {
 
 //    implementation ("com.google.android.material:material:1.4.0")
 
+    implementation ("com.airbnb.android:lottie:4.0.0")
+
+    implementation ("com.flaviofaria:kenburnsview:1.0.7")
+
+    implementation ("com.squareup.picasso:picasso:2.71828")
+
+
 
 }
