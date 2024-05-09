@@ -17,6 +17,8 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
 
+        <activity android:name=".fragments.VotandoFragment" />
+
         <activity
             android:name=".ChangePasswordOnLogInActivity"
             android:exported="false" />

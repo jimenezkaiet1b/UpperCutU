@@ -96,6 +96,8 @@ dependencies {
 
     implementation ("com.squareup.picasso:picasso:2.71828")
 
+    //news APIs
+    //implementation("com.github.KwabenBerko:News-API-Java:1.0.2")
 
 
 }

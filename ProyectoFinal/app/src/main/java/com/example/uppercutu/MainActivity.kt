@@ -95,6 +95,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.page_votar -> votarFragment
                 R.id.page_ranking -> fragmentRanking
 
+
                 else -> fragmentHome
             }
 

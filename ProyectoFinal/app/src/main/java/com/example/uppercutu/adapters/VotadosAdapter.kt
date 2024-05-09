@@ -13,6 +13,7 @@ import java.util.*
 
 class VotadosAdapter(private var votadosList: MutableList<Votados>, private val onItemClick: (Int) -> Unit) :
     RecyclerView.Adapter<VotadosAdapter.ViewHolder>() {
+    var itemClickListener: OnItemClickListener? = null
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tituloTextView: TextView = itemView.findViewById(R.id.itemList_nameTextView)
@@ -65,9 +66,16 @@ class VotadosAdapter(private var votadosList: MutableList<Votados>, private val 
             "dd/MM/yyyy",
             Locale.getDefault()
         ).format(currentItem.fechaCreacion)
+
+        holder.itemView.setOnClickListener {
+            itemClickListener?.onItemClick(position)
+        }
     }
 
 
+    interface OnItemClickListener {
+        fun onItemClick(position: Int)
+    }
 }
 
 

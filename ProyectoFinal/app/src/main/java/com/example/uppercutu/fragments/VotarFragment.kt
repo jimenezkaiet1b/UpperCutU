@@ -13,7 +13,6 @@ import com.example.uppercutu.adapters.VotadosAdapter
 import com.example.uppercutu.data.Votados
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.util.*
-
 class VotarFragment : Fragment() {
 
     private lateinit var votadosAdapter: VotadosAdapter
@@ -47,7 +46,7 @@ class VotarFragment : Fragment() {
                         Date()
                     )
                     votadosList.add(nuevoVotado)
-                    votadosAdapter.notifyItemInserted(votadosList.size - 1) // Notificar al adaptador sobre el nuevo elemento
+                    votadosAdapter.notifyItemInserted(votadosList.size - 1)
                     rvVotar.scrollToPosition(votadosList.size - 1)
                 }
             })
@@ -58,6 +57,8 @@ class VotarFragment : Fragment() {
                 .commit()
         }
 
+        rvVotar = view.findViewById(R.id.recyclerVotar)
+        rvVotar.layoutManager = LinearLayoutManager(context)
         votadosAdapter = VotadosAdapter(votadosList) { position ->
             val otroFragmento = VotandoFragment()
             parentFragmentManager.beginTransaction()
@@ -66,8 +67,16 @@ class VotarFragment : Fragment() {
                 .commit()
         }
 
-        rvVotar = view.findViewById(R.id.recyclerVotar)
-        rvVotar.layoutManager = LinearLayoutManager(context)
+        votadosAdapter.itemClickListener = object : VotadosAdapter.OnItemClickListener {
+            override fun onItemClick(position: Int) {
+                val otroFragmento = VotandoFragment()
+                parentFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentContainerView, otroFragmento)
+                    .addToBackStack(null)
+                    .commit()
+            }
+        }
+
         rvVotar.adapter = votadosAdapter
     }
 }
