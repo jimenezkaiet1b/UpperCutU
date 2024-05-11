@@ -8,18 +8,19 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uppercutu.R
 import com.example.uppercutu.data.Votados
+import com.example.uppercutu.modelo.news.Article
 import java.text.SimpleDateFormat
 import java.util.*
 
 class VotadosAdapter(private var votadosList: MutableList<Votados>, private val onItemClick: (Int) -> Unit) :
     RecyclerView.Adapter<VotadosAdapter.ViewHolder>() {
     var itemClickListener: OnItemClickListener? = null
+    private var articles: List<Article> = emptyList()
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tituloTextView: TextView = itemView.findViewById(R.id.itemList_nameTextView)
         val descripcionTextView: TextView = itemView.findViewById(R.id.itemList_description)
-        val fechaCreacionTextView: TextView =
-            itemView.findViewById(R.id.itemList_creationDateTextView)
+        val fechaCreacionTextView: TextView = itemView.findViewById(R.id.itemList_creationDateTextView)
 
         init {
             // Otros códigos de inicialización de ViewHolder
@@ -72,7 +73,10 @@ class VotadosAdapter(private var votadosList: MutableList<Votados>, private val 
         }
     }
 
-
+    fun updateArticles(newArticles: List<Article>) {
+        articles = newArticles
+        notifyDataSetChanged()
+    }
     interface OnItemClickListener {
         fun onItemClick(position: Int)
     }

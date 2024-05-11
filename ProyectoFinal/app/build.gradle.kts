@@ -99,5 +99,21 @@ dependencies {
     //news APIs
     //implementation("com.github.KwabenBerko:News-API-Java:1.0.2")
 
+    // Retrofit
+    // https://square.github.io/retrofit/
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+
+    // Gson (Retrofit version)
+    // https://github.com/google/gson
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // CarouselRecyclerView
+    // https://github.com/sparrow007/CarouselRecyclerview
+    implementation ("com.github.sparrow007:carouselrecyclerview:1.2.6")
+
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.5.0")
+    implementation("com.github.bumptech.glide:glide:4.12.0")
+    implementation("com.github.kittinunf.fuel:fuel:3.0.0-alpha1")
+
 
 }

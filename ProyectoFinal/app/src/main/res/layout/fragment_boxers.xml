@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/page_boxers">
 
     <TextView
         android:id="@+id/textView"
@@ -12,18 +13,20 @@
         android:text="Design"
         android:textSize="28sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_editor_absoluteX="28dp"
-        app:layout_editor_absoluteY="36dp"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="36dp" />
+        app:layout_editor_absoluteY="36dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/boxersRv"
         android:layout_width="408dp"
         android:layout_height="634dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_editor_absoluteX="28dp"
-        app:layout_editor_absoluteY="36dp"
-        tools:layout_editor_absoluteX="3dp" />
+        app:layout_editor_absoluteY="36dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

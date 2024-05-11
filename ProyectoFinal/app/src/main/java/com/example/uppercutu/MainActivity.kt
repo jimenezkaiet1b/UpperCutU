@@ -1,5 +1,6 @@
 package com.example.uppercutu
 
+import com.example.uppercutu.fragments.HomeFragment
 import com.example.uppercutu.fragments.VotarFragment
 import android.content.Context
 import android.content.res.Configuration
@@ -17,7 +18,6 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
-import com.example.uppercutu.fragments.HomeFragment
 import com.example.uppercutu.fragments.PerfilFragment
 import com.example.uppercutu.fragments.RankingFragment
 import com.example.uppercutu.fragments.UserFragment
@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
         val fragmentHome = HomeFragment()
         val votarFragment = VotarFragment()
         val fragmentRanking = RankingFragment()
-        val fragmentUser = UserFragment()
+
 
         replaceFragment(fragmentHome)
 
@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
             val newFragment = when (menuItem.itemId) {
                 R.id.page_home -> fragmentHome
                 R.id.page_votar -> votarFragment
-                R.id.page_ranking -> fragmentRanking
+                R.id.page_ranking-> fragmentRanking
 
 
                 else -> fragmentHome

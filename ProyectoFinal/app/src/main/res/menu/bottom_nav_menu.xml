@@ -7,8 +7,7 @@
         android:title="Inicio"
         android:iconTint="?attr/colorPrimary"/>
     <item
-        android:id="@+id/page_trofeo"
-
+        android:id="@+id/page_ranking"
         android:icon="@drawable/trophy_silhouette_svgrepo_com"
         android:title="Ranking"
         android:iconTint="?attr/colorPrimary"/>
