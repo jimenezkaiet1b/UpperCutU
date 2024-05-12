@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.uppercutu.R
 import com.example.uppercutu.modelo.events.EventosItem
 
-class EventosAdapter(private val context: Context, private val eventos: List<EventosItem>) :
+class EventosAdapter(private val context: Context, private var eventos: List<EventosItem>) :
     RecyclerView.Adapter<EventosAdapter.EventoViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventoViewHolder {
@@ -38,6 +38,15 @@ class EventosAdapter(private val context: Context, private val eventos: List<Eve
             dateTimeTextView.text = evento.DateTime
             shortNameTextView.text = evento.ShortName
 
+            // Aquí podrías cargar la imagen del evento si fuera necesario
+            // Puedes usar una biblioteca como Picasso o Glide para cargar imágenes desde URL
+            // Ejemplo: Picasso.get().load(evento.imageUrl).into(urlImageView)
         }
+    }
+
+    // Este método actualiza la lista de eventos y notifica al RecyclerView sobre los cambios
+    fun updateEvents(events: List<EventosItem>) {
+        this.eventos = events
+        notifyDataSetChanged()
     }
 }

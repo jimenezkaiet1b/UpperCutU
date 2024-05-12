@@ -115,5 +115,12 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.12.0")
     implementation("com.github.kittinunf.fuel:fuel:3.0.0-alpha1")
 
-
+    implementation ("com.google.android.material:material:1.5.0")
+    implementation ("com.wdullaer:materialdatetimepicker:4.2.3")
 }
+
+
+
+
+
+

@@ -1,5 +1,6 @@
 package com.example.uppercutu.api
 
+import android.util.Log
 import com.example.uppercutu.modelo.events.EventosItem
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -40,16 +41,18 @@ class SportApi {
     }
 
     fun getSchedule(league: String, year: String): String {
-        val endpoint = "https://api.sportsdata.io/v3/mma/scores/json/Schedule?key=$API_KEY_MMA&league=$league&year=$year"
+        Log.d("definitiva",year)
+        val endpoint = "https://api.sportsdata.io/v3/mma/scores/json/Schedule/$league/$year?key=8c50528362f34136b7dd308745c72b36"
         return sendGetRequest(endpoint)
     }
 
-    private fun parseSchedule(scheduleJson: String): List<EventosItem> {
+    fun parseSchedule(scheduleJson: String): List<EventosItem> {
         val eventosList = mutableListOf<EventosItem>()
 
         // Parsear el JSON de la respuesta y crear objetos EventosItem
         val jsonArray = JSONArray(scheduleJson)
         for (i in 0 until jsonArray.length()) {
+            Log.d("Response", "Response: $scheduleJson")
             val jsonObject = jsonArray.getJSONObject(i)
             val evento = EventosItem(
                 Active = jsonObject.getBoolean("Active"),
@@ -68,6 +71,7 @@ class SportApi {
         return eventosList
     }
 
+
     private fun sendGetRequest(endpoint: String): String {
         val url = URL(endpoint)
         val connection = url.openConnection() as HttpURLConnection
@@ -76,7 +80,15 @@ class SportApi {
         val responseCode = connection.responseCode
         println("Response Code : $responseCode")
 
-        return  responseCode.toString()
+        if (responseCode == HttpURLConnection.HTTP_OK) {
+            val inputStream = connection.inputStream
+            val response = inputStream.bufferedReader().use { it.readText() }
+            inputStream.close()
+            return response
+        } else {
+            return "Error: $responseCode"
+        }
     }
+
 
 }
