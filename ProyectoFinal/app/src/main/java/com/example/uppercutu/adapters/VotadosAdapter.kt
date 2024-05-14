@@ -3,84 +3,40 @@ package com.example.uppercutu.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uppercutu.R
-import com.example.uppercutu.data.Votados
-import com.example.uppercutu.modelo.news.Article
-import java.text.SimpleDateFormat
-import java.util.*
+import com.example.uppercutu.data.Votacion
+import com.example.uppercutu.fragments.VotarFragment
 
-class VotadosAdapter(private var votadosList: MutableList<Votados>, private val onItemClick: (Int) -> Unit) :
-    RecyclerView.Adapter<VotadosAdapter.ViewHolder>() {
-    var itemClickListener: OnItemClickListener? = null
-    private var articles: List<Article> = emptyList()
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tituloTextView: TextView = itemView.findViewById(R.id.itemList_nameTextView)
-        val descripcionTextView: TextView = itemView.findViewById(R.id.itemList_description)
-        val fechaCreacionTextView: TextView = itemView.findViewById(R.id.itemList_creationDateTextView)
 
-        init {
-            // Otros códigos de inicialización de ViewHolder
-            val deleteButton: ImageButton = itemView.findViewById(R.id.itemList_deleteBtn)
-            deleteButton.setOnClickListener {
-                val position = adapterPosition
-                if (position != RecyclerView.NO_POSITION) {
+class VotadosAdapter(private val votaciones: MutableList<Votacion>) : RecyclerView.Adapter<VotadosAdapter.VotacionViewHolder>() {
 
-                    deleteItem(position)
-                }
-            }
-            itemView.setOnClickListener {
-                onItemClick(adapterPosition)
-            }
-        }
-
-        fun getPositionForItem(item: Votados): Int {
-            return votadosList.indexOf(item)
-        }
-
-        fun deleteItem(position: Int) {
-            votadosList.removeAt(position)
-            notifyItemRemoved(position)
-        }
-
+    inner class VotacionViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val boxer1NameTextView: TextView = itemView.findViewById(R.id.boxer1Name)
+        val boxer2NameTextView: TextView = itemView.findViewById(R.id.boxer2_name)
+        val numberOfRoundsTextView: TextView = itemView.findViewById(R.id.numberOfRoundsTextView)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.votados_list, parent, false)
-        return ViewHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VotacionViewHolder {
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.votados_list, parent, false)
+        return VotacionViewHolder(itemView)
     }
 
-    override fun getItemCount(): Int {
-       return votadosList.size
+    override fun onBindViewHolder(holder: VotacionViewHolder, position: Int) {
+        val currentVotacion = votaciones[position]
+        holder.boxer1NameTextView.text = currentVotacion.boxer1Name
+        holder.boxer2NameTextView.text = currentVotacion.boxer2Name
+        holder.numberOfRoundsTextView.text = currentVotacion.numberOfRounds.toString()
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val currentItem = votadosList[position]
+    override fun getItemCount() = votaciones.size
 
-        holder.tituloTextView.text = currentItem.titulo
-        holder.descripcionTextView.text = currentItem.descripcion
-        holder.fechaCreacionTextView.text = SimpleDateFormat(
-            "dd/MM/yyyy",
-            Locale.getDefault()
-        ).format(currentItem.fechaCreacion)
-
-        holder.itemView.setOnClickListener {
-            itemClickListener?.onItemClick(position)
-        }
+    fun agregarVotacion(votacion: Votacion) {
+        votaciones.add(votacion)
+        notifyItemInserted(votaciones.size - 1) // Notifica al adaptador sobre la inserción en la última posición
     }
 
-    fun updateArticles(newArticles: List<Article>) {
-        articles = newArticles
-        notifyDataSetChanged()
-    }
-    interface OnItemClickListener {
-        fun onItemClick(position: Int)
-    }
 }
-
-
 

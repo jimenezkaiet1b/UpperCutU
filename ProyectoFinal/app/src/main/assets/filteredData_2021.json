@@ -1,0 +1,1246 @@
+{
+  "2021": [
+    {
+      "date": "2021-01-18",
+      "weightclass": "Flyweight",
+      "fighter": "Deiveson Figueiredo",
+      "rank": "0"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Flyweight",
+      "fighter": "Brandon Moreno",
+      "rank": "1"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Flyweight",
+      "fighter": "Joseph Benavidez",
+      "rank": "2"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Flyweight",
+      "fighter": "Askar Askarov",
+      "rank": "3"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Flyweight",
+      "fighter": "Alex Perez",
+      "rank": "4"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Flyweight",
+      "fighter": "Alexandre Pantoja",
+      "rank": "5"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Flyweight",
+      "fighter": "Brandon Royval",
+      "rank": "6"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Flyweight",
+      "fighter": "Rogerio Bontorin",
+      "rank": "7"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Flyweight",
+      "fighter": "Kai Kara-France",
+      "rank": "8"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Flyweight",
+      "fighter": "Matt Schnell",
+      "rank": "9"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Flyweight",
+      "fighter": "Raulian Paiva",
+      "rank": "10"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Flyweight",
+      "fighter": "David Dvorak",
+      "rank": "11"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Flyweight",
+      "fighter": "Tim Elliott",
+      "rank": "12"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Flyweight",
+      "fighter": "Tyson Nam",
+      "rank": "13"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Flyweight",
+      "fighter": "Jordan Espinosa",
+      "rank": "14"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Flyweight",
+      "fighter": "Amir Albazi",
+      "rank": "15"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Bantamweight",
+      "fighter": "Petr Yan",
+      "rank": "0"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Bantamweight",
+      "fighter": "Aljamain Sterling",
+      "rank": "1"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Bantamweight",
+      "fighter": "Cory Sandhagen",
+      "rank": "2"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Bantamweight",
+      "fighter": "Cody Garbrandt",
+      "rank": "3"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Bantamweight",
+      "fighter": "Frankie Edgar",
+      "rank": "4"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Bantamweight",
+      "fighter": "Rob Font",
+      "rank": "5"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Bantamweight",
+      "fighter": "José Aldo",
+      "rank": "6"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Bantamweight",
+      "fighter": "Marlon Moraes",
+      "rank": "7"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Bantamweight",
+      "fighter": "Pedro Munhoz",
+      "rank": "8"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Bantamweight",
+      "fighter": "Jimmie Rivera",
+      "rank": "9"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Bantamweight",
+      "fighter": "Raphael Assuncao",
+      "rank": "10"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Bantamweight",
+      "fighter": "Dominick Cruz",
+      "rank": "11"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Bantamweight",
+      "fighter": "Merab Dvalishvili",
+      "rank": "12"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Bantamweight",
+      "fighter": "Cody Stamann",
+      "rank": "13"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Bantamweight",
+      "fighter": "Song Yadong",
+      "rank": "14"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Bantamweight",
+      "fighter": "Casey Kenney",
+      "rank": "15"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Featherweight",
+      "fighter": "Alexander Volkanovski",
+      "rank": "0"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Featherweight",
+      "fighter": "Max Holloway",
+      "rank": "1"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Featherweight",
+      "fighter": "Brian Ortega",
+      "rank": "2"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Featherweight",
+      "fighter": "Zabit Magomedsharipov",
+      "rank": "3"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Featherweight",
+      "fighter": "Yair Rodriguez",
+      "rank": "4"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Featherweight",
+      "fighter": "Chan Sung Jung",
+      "rank": "5"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Featherweight",
+      "fighter": "Calvin Kattar",
+      "rank": "6"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Featherweight",
+      "fighter": "Josh Emmett",
+      "rank": "7"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Featherweight",
+      "fighter": "Jeremy Stephens",
+      "rank": "8"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Featherweight",
+      "fighter": "Arnold Allen",
+      "rank": "9"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Featherweight",
+      "fighter": "Sodiq Yusuff",
+      "rank": "10"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Featherweight",
+      "fighter": "Dan Ige",
+      "rank": "11"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Featherweight",
+      "fighter": "Shane Burgos",
+      "rank": "12"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Featherweight",
+      "fighter": "Ryan Hall",
+      "rank": "13"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Featherweight",
+      "fighter": "Bryce Mitchell",
+      "rank": "14"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Featherweight",
+      "fighter": "Edson Barboza",
+      "rank": "15"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Lightweight",
+      "fighter": "Khabib Nurmagomedov",
+      "rank": "0"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Lightweight",
+      "fighter": "Justin Gaethje",
+      "rank": "1"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Lightweight",
+      "fighter": "Dustin Poirier",
+      "rank": "2"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Lightweight",
+      "fighter": "Charles Oliveira",
+      "rank": "3"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Lightweight",
+      "fighter": "Conor McGregor",
+      "rank": "4"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Lightweight",
+      "fighter": "Tony Ferguson",
+      "rank": "5"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Lightweight",
+      "fighter": "Dan Hooker",
+      "rank": "6"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Lightweight",
+      "fighter": "Rafael Dos Anjos",
+      "rank": "7"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Lightweight",
+      "fighter": "Paul Felder",
+      "rank": "8"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Lightweight",
+      "fighter": "Diego Ferreira",
+      "rank": "9"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Lightweight",
+      "fighter": "Al Iaquinta",
+      "rank": "10"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Lightweight",
+      "fighter": "Kevin Lee",
+      "rank": "11"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Lightweight",
+      "fighter": "Beneil Dariush",
+      "rank": "12"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Lightweight",
+      "fighter": "Islam Makhachev",
+      "rank": "13"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Lightweight",
+      "fighter": "Gregor Gillespie",
+      "rank": "14"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Lightweight",
+      "fighter": "Drew Dober",
+      "rank": "15"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Welterweight",
+      "fighter": "Kamaru Usman",
+      "rank": "0"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Welterweight",
+      "fighter": "Colby Covington",
+      "rank": "1"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Welterweight",
+      "fighter": "Gilbert Burns",
+      "rank": "2"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Welterweight",
+      "fighter": "Leon Edwards",
+      "rank": "3"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Welterweight",
+      "fighter": "Jorge Masvidal",
+      "rank": "4"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Welterweight",
+      "fighter": "Stephen Thompson",
+      "rank": "5"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Welterweight",
+      "fighter": "Tyron Woodley",
+      "rank": "6"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Welterweight",
+      "fighter": "Demian Maia",
+      "rank": "7"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Welterweight",
+      "fighter": "Michael Chiesa",
+      "rank": "8"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Welterweight",
+      "fighter": "Neil Magny",
+      "rank": "9"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Welterweight",
+      "fighter": "Vicente Luque",
+      "rank": "10"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Welterweight",
+      "fighter": "Geoff Neal",
+      "rank": "11"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Welterweight",
+      "fighter": "Li Jingliang",
+      "rank": "12"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Welterweight",
+      "fighter": "Belal Muhammad",
+      "rank": "13"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Welterweight",
+      "fighter": "Robbie Lawler",
+      "rank": "14"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Welterweight",
+      "fighter": "Khamzat Chimaev",
+      "rank": "15"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Middleweight",
+      "fighter": "Israel Adesanya",
+      "rank": "0"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Middleweight",
+      "fighter": "Robert Whittaker",
+      "rank": "1"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Middleweight",
+      "fighter": "Paulo Costa",
+      "rank": "2"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Middleweight",
+      "fighter": "Jared Cannonier",
+      "rank": "3"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Middleweight",
+      "fighter": "Darren Till",
+      "rank": "4"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Middleweight",
+      "fighter": "Marvin Vettori",
+      "rank": "5"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Middleweight",
+      "fighter": "Jack Hermansson",
+      "rank": "6"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Middleweight",
+      "fighter": "Derek Brunson",
+      "rank": "7"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Middleweight",
+      "fighter": "Kelvin Gastelum",
+      "rank": "8"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Middleweight",
+      "fighter": "Uriah Hall",
+      "rank": "9"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Middleweight",
+      "fighter": "Kevin Holland",
+      "rank": "10"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Middleweight",
+      "fighter": "Chris Weidman",
+      "rank": "11"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Middleweight",
+      "fighter": "Edmen Shahbazyan",
+      "rank": "12"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Middleweight",
+      "fighter": "Omari Akhmedov",
+      "rank": "13"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Middleweight",
+      "fighter": "Brad Tavares",
+      "rank": "14"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Middleweight",
+      "fighter": "Ian Heinisch",
+      "rank": "15"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Jan Błachowicz",
+      "rank": "0"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Glover Teixeira",
+      "rank": "1"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Thiago Santos",
+      "rank": "2"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Dominick Reyes",
+      "rank": "3"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Aleksandar Rakić",
+      "rank": "4"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Jiří Procházka",
+      "rank": "5"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Anthony Smith",
+      "rank": "6"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Volkan Oezdemir",
+      "rank": "7"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Nikita Krylov",
+      "rank": "8"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Johnny Walker",
+      "rank": "9"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Misha Cirkunov",
+      "rank": "10"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Magomed Ankalaev",
+      "rank": "11"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Jimmy Crute",
+      "rank": "12"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Ryan Spann",
+      "rank": "13"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Paul Craig",
+      "rank": "14"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Jamahal Hill",
+      "rank": "15"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Heavyweight",
+      "fighter": "Stipe Miocic",
+      "rank": "0"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Heavyweight",
+      "fighter": "Francis Ngannou",
+      "rank": "1"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Heavyweight",
+      "fighter": "Curtis Blaydes",
+      "rank": "2"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Heavyweight",
+      "fighter": "Jairzinho Rozenstruik",
+      "rank": "3"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Heavyweight",
+      "fighter": "Derrick Lewis",
+      "rank": "4"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Heavyweight",
+      "fighter": "Alistair Overeem",
+      "rank": "5"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Heavyweight",
+      "fighter": "Alexander Volkov",
+      "rank": "6"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Heavyweight",
+      "fighter": "Ciryl Gane",
+      "rank": "7"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Heavyweight",
+      "fighter": "Shamil Abdurakhimov",
+      "rank": "8"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Heavyweight",
+      "fighter": "Augusto Sakai",
+      "rank": "9"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Heavyweight",
+      "fighter": "Aleksei Oleinik",
+      "rank": "10"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Heavyweight",
+      "fighter": "Junior dos Santos",
+      "rank": "11"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Heavyweight",
+      "fighter": "Walt Harris",
+      "rank": "11"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Heavyweight",
+      "fighter": "Blagoy Ivanov",
+      "rank": "13"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Heavyweight",
+      "fighter": "Sergei Pavlovich",
+      "rank": "14"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Heavyweight",
+      "fighter": "Marcin Tybura",
+      "rank": "14"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Zhang Weili",
+      "rank": "0"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Rose Namajunas",
+      "rank": "1"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Joanna Jedrzejczyk",
+      "rank": "2"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Yan Xiaonan",
+      "rank": "3"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Carla Esparza",
+      "rank": "4"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Nina Nunes",
+      "rank": "5"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Claudia Gadelha",
+      "rank": "6"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Michelle Waterson-Gomez",
+      "rank": "7"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Marina Rodriguez",
+      "rank": "8"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Tecia Torres",
+      "rank": "9"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Amanda Ribas",
+      "rank": "10"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Mackenzie Dern",
+      "rank": "11"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Angela Hill",
+      "rank": "12"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Virna Jandiroba",
+      "rank": "13"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Felice Herrig",
+      "rank": "14"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Livinha Souza",
+      "rank": "15"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Valentina Shevchenko",
+      "rank": "0"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Jéssica Andrade",
+      "rank": "1"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Katlyn Cerminara",
+      "rank": "2"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Lauren Murphy",
+      "rank": "3"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Jennifer Maia",
+      "rank": "4"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Cynthia Calvillo",
+      "rank": "5"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Jessica Eye",
+      "rank": "6"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Joanne Wood",
+      "rank": "7"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Roxanne Modafferi",
+      "rank": "8"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Viviane Araújo",
+      "rank": "9"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Maycee Barber",
+      "rank": "10"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Andrea Lee",
+      "rank": "11"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Alexis Davis",
+      "rank": "12"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Taila Santos",
+      "rank": "13"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Antonina Shevchenko",
+      "rank": "14"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Alexa Grasso",
+      "rank": "15"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Amanda Nunes",
+      "rank": "0"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Germaine de Randamie",
+      "rank": "1"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Holly Holm",
+      "rank": "2"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Aspen Ladd",
+      "rank": "3"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Raquel Pennington",
+      "rank": "4"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Irene Aldana",
+      "rank": "5"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Ketlen Vieira",
+      "rank": "6"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Julianna Peña",
+      "rank": "7"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Yana Santos",
+      "rank": "8"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Sara McMann",
+      "rank": "9"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Marion Reneau",
+      "rank": "10"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Lina Lansberg",
+      "rank": "11"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Macy Chiasson",
+      "rank": "12"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Pannie Kianzad",
+      "rank": "13"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Sijara Eubanks",
+      "rank": "14"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Julia Avila",
+      "rank": "15"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Featherweight",
+      "fighter": "Amanda Nunes",
+      "rank": "0"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Khabib Nurmagomedov",
+      "rank": "1"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Jon Jones",
+      "rank": "2"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Israel Adesanya",
+      "rank": "3"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Stipe Miocic",
+      "rank": "4"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Kamaru Usman",
+      "rank": "5"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Alexander Volkanovski",
+      "rank": "6"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Dustin Poirier",
+      "rank": "7"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Max Holloway",
+      "rank": "8"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Deiveson Figueiredo",
+      "rank": "9"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Petr Yan",
+      "rank": "10"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Justin Gaethje",
+      "rank": "11"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Robert Whittaker",
+      "rank": "12"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Conor McGregor",
+      "rank": "13"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Francis Ngannou",
+      "rank": "14"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Jan Błachowicz",
+      "rank": "15"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Amanda Nunes",
+      "rank": "1"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Valentina Shevchenko",
+      "rank": "2"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Zhang Weili",
+      "rank": "3"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Rose Namajunas",
+      "rank": "4"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Jéssica Andrade",
+      "rank": "5"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Joanna Jedrzejczyk",
+      "rank": "6"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Germaine de Randamie",
+      "rank": "7"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Holly Holm",
+      "rank": "8"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Aspen Ladd",
+      "rank": "9"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Katlyn Cerminara",
+      "rank": "10"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Nina Nunes",
+      "rank": "11"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Yan Xiaonan",
+      "rank": "12"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Cynthia Calvillo",
+      "rank": "13"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Claudia Gadelha",
+      "rank": "14"
+    },
+    {
+      "date": "2021-01-18",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Carla Esparza",
+      "rank": "15"
+    }
+  ]
+}

@@ -1,0 +1,1247 @@
+{
+  "2022": [
+    {
+      "date": "2022-01-17",
+      "weightclass": "Flyweight",
+      "fighter": "Brandon Moreno",
+      "rank": "0"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Flyweight",
+      "fighter": "Deiveson Figueiredo",
+      "rank": "1"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Flyweight",
+      "fighter": "Askar Askarov",
+      "rank": "2"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Flyweight",
+      "fighter": "Alexandre Pantoja",
+      "rank": "3"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Flyweight",
+      "fighter": "Alex Perez",
+      "rank": "4"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Flyweight",
+      "fighter": "Brandon Royval",
+      "rank": "4"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Flyweight",
+      "fighter": "Kai Kara-France",
+      "rank": "6"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Flyweight",
+      "fighter": "Rogerio Bontorin",
+      "rank": "7"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Flyweight",
+      "fighter": "Matheus Nicolau",
+      "rank": "8"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Flyweight",
+      "fighter": "Matt Schnell",
+      "rank": "9"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Flyweight",
+      "fighter": "David Dvorak",
+      "rank": "10"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Flyweight",
+      "fighter": "Amir Albazi",
+      "rank": "11"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Flyweight",
+      "fighter": "Tim Elliott",
+      "rank": "12"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Flyweight",
+      "fighter": "Sumudaerji",
+      "rank": "13"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Flyweight",
+      "fighter": "Manel Kape",
+      "rank": "14"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Flyweight",
+      "fighter": "Tagir Ulanbekov",
+      "rank": "15"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Bantamweight",
+      "fighter": "Aljamain Sterling",
+      "rank": "0"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Bantamweight",
+      "fighter": "Petr Yan",
+      "rank": "1"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Bantamweight",
+      "fighter": "TJ Dillashaw",
+      "rank": "2"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Bantamweight",
+      "fighter": "José Aldo",
+      "rank": "3"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Bantamweight",
+      "fighter": "Cory Sandhagen",
+      "rank": "4"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Bantamweight",
+      "fighter": "Rob Font",
+      "rank": "5"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Bantamweight",
+      "fighter": "Merab Dvalishvili",
+      "rank": "6"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Bantamweight",
+      "fighter": "Dominick Cruz",
+      "rank": "7"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Bantamweight",
+      "fighter": "Marlon Vera",
+      "rank": "8"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Bantamweight",
+      "fighter": "Marlon Moraes",
+      "rank": "9"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Bantamweight",
+      "fighter": "Pedro Munhoz",
+      "rank": "10"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Bantamweight",
+      "fighter": "Frankie Edgar",
+      "rank": "11"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Bantamweight",
+      "fighter": "Sean O'Malley",
+      "rank": "12"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Bantamweight",
+      "fighter": "Ricky Simon",
+      "rank": "13"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Bantamweight",
+      "fighter": "Song Yadong",
+      "rank": "14"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Bantamweight",
+      "fighter": "Raphael Assuncao",
+      "rank": "15"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Featherweight",
+      "fighter": "Alexander Volkanovski",
+      "rank": "0"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Featherweight",
+      "fighter": "Max Holloway",
+      "rank": "1"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Featherweight",
+      "fighter": "Brian Ortega",
+      "rank": "2"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Featherweight",
+      "fighter": "Yair Rodriguez",
+      "rank": "3"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Featherweight",
+      "fighter": "Chan Sung Jung",
+      "rank": "4"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Featherweight",
+      "fighter": "Calvin Kattar",
+      "rank": "5"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Featherweight",
+      "fighter": "Josh Emmett",
+      "rank": "6"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Featherweight",
+      "fighter": "Arnold Allen",
+      "rank": "7"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Featherweight",
+      "fighter": "Giga Chikadze",
+      "rank": "8"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Featherweight",
+      "fighter": "Dan Ige",
+      "rank": "9"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Featherweight",
+      "fighter": "Edson Barboza",
+      "rank": "10"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Featherweight",
+      "fighter": "Bryce Mitchell",
+      "rank": "11"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Featherweight",
+      "fighter": "Sodiq Yusuff",
+      "rank": "12"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Featherweight",
+      "fighter": "Movsar Evloev",
+      "rank": "13"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Featherweight",
+      "fighter": "Shane Burgos",
+      "rank": "14"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Featherweight",
+      "fighter": "Alex Caceres",
+      "rank": "15"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Lightweight",
+      "fighter": "Charles Oliveira",
+      "rank": "0"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Lightweight",
+      "fighter": "Justin Gaethje",
+      "rank": "1"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Lightweight",
+      "fighter": "Dustin Poirier",
+      "rank": "2"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Lightweight",
+      "fighter": "Beneil Dariush",
+      "rank": "3"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Lightweight",
+      "fighter": "Islam Makhachev",
+      "rank": "4"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Lightweight",
+      "fighter": "Michael Chandler",
+      "rank": "5"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Lightweight",
+      "fighter": "Rafael Dos Anjos",
+      "rank": "6"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Lightweight",
+      "fighter": "Tony Ferguson",
+      "rank": "7"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Lightweight",
+      "fighter": "Dan Hooker",
+      "rank": "8"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Lightweight",
+      "fighter": "Conor McGregor",
+      "rank": "9"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Lightweight",
+      "fighter": "Gregor Gillespie",
+      "rank": "10"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Lightweight",
+      "fighter": "Rafael Fiziev",
+      "rank": "11"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Lightweight",
+      "fighter": "Mateusz Gamrot",
+      "rank": "12"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Lightweight",
+      "fighter": "Arman Tsarukyan",
+      "rank": "13"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Lightweight",
+      "fighter": "Brad Riddell",
+      "rank": "14"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Lightweight",
+      "fighter": "Diego Ferreira",
+      "rank": "15"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Welterweight",
+      "fighter": "Kamaru Usman",
+      "rank": "0"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Welterweight",
+      "fighter": "Colby Covington",
+      "rank": "1"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Welterweight",
+      "fighter": "Gilbert Burns",
+      "rank": "2"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Welterweight",
+      "fighter": "Leon Edwards",
+      "rank": "3"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Welterweight",
+      "fighter": "Vicente Luque",
+      "rank": "4"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Welterweight",
+      "fighter": "Belal Muhammad",
+      "rank": "5"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Welterweight",
+      "fighter": "Jorge Masvidal",
+      "rank": "6"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Welterweight",
+      "fighter": "Stephen Thompson",
+      "rank": "7"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Welterweight",
+      "fighter": "Neil Magny",
+      "rank": "8"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Welterweight",
+      "fighter": "Sean Brady",
+      "rank": "9"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Welterweight",
+      "fighter": "Michael Chiesa",
+      "rank": "10"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Welterweight",
+      "fighter": "Khamzat Chimaev",
+      "rank": "11"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Welterweight",
+      "fighter": "Geoff Neal",
+      "rank": "12"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Welterweight",
+      "fighter": "Li Jingliang",
+      "rank": "13"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Welterweight",
+      "fighter": "Santiago Ponzinibbio",
+      "rank": "14"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Welterweight",
+      "fighter": "Muslim Salikhov",
+      "rank": "15"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Middleweight",
+      "fighter": "Israel Adesanya",
+      "rank": "0"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Middleweight",
+      "fighter": "Robert Whittaker",
+      "rank": "1"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Middleweight",
+      "fighter": "Marvin Vettori",
+      "rank": "2"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Middleweight",
+      "fighter": "Jared Cannonier",
+      "rank": "3"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Middleweight",
+      "fighter": "Derek Brunson",
+      "rank": "4"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Middleweight",
+      "fighter": "Paulo Costa",
+      "rank": "5"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Middleweight",
+      "fighter": "Jack Hermansson",
+      "rank": "6"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Middleweight",
+      "fighter": "Sean Strickland",
+      "rank": "7"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Middleweight",
+      "fighter": "Darren Till",
+      "rank": "8"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Middleweight",
+      "fighter": "Uriah Hall",
+      "rank": "9"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Middleweight",
+      "fighter": "Kelvin Gastelum",
+      "rank": "10"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Middleweight",
+      "fighter": "Brad Tavares",
+      "rank": "11"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Middleweight",
+      "fighter": "Nassourdine Imavov",
+      "rank": "12"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Middleweight",
+      "fighter": "Andre Muniz",
+      "rank": "13"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Middleweight",
+      "fighter": "Kevin Holland",
+      "rank": "14"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Middleweight",
+      "fighter": "Chris Weidman",
+      "rank": "15"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Glover Teixeira",
+      "rank": "0"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Jan Błachowicz",
+      "rank": "1"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Jiří Procházka",
+      "rank": "2"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Aleksandar Rakić",
+      "rank": "3"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Anthony Smith",
+      "rank": "4"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Thiago Santos",
+      "rank": "5"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Magomed Ankalaev",
+      "rank": "6"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Dominick Reyes",
+      "rank": "7"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Volkan Oezdemir",
+      "rank": "8"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Nikita Krylov",
+      "rank": "9"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Johnny Walker",
+      "rank": "10"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Paul Craig",
+      "rank": "11"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Jamahal Hill",
+      "rank": "12"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Ryan Spann",
+      "rank": "13"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Jimmy Crute",
+      "rank": "14"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Light Heavyweight",
+      "fighter": "Ion Cutelaba",
+      "rank": "15"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Heavyweight",
+      "fighter": "Francis Ngannou",
+      "rank": "0"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Heavyweight",
+      "fighter": "Ciryl Gane",
+      "rank": "1"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Heavyweight",
+      "fighter": "Stipe Miocic",
+      "rank": "2"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Heavyweight",
+      "fighter": "Derrick Lewis",
+      "rank": "3"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Heavyweight",
+      "fighter": "Curtis Blaydes",
+      "rank": "4"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Heavyweight",
+      "fighter": "Alexander Volkov",
+      "rank": "5"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Heavyweight",
+      "fighter": "Jairzinho Rozenstruik",
+      "rank": "6"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Heavyweight",
+      "fighter": "Chris Daukaus",
+      "rank": "7"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Heavyweight",
+      "fighter": "Shamil Abdurakhimov",
+      "rank": "8"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Heavyweight",
+      "fighter": "Marcin Tybura",
+      "rank": "9"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Heavyweight",
+      "fighter": "Tom Aspinall",
+      "rank": "10"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Heavyweight",
+      "fighter": "Tai Tuivasa",
+      "rank": "11"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Heavyweight",
+      "fighter": "Augusto Sakai",
+      "rank": "12"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Heavyweight",
+      "fighter": "Blagoy Ivanov",
+      "rank": "13"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Heavyweight",
+      "fighter": "Walt Harris",
+      "rank": "14"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Heavyweight",
+      "fighter": "Sergei Pavlovich",
+      "rank": "15"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Rose Namajunas",
+      "rank": "0"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Zhang Weili",
+      "rank": "1"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Carla Esparza",
+      "rank": "2"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Marina Rodriguez",
+      "rank": "3"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Yan Xiaonan",
+      "rank": "4"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Mackenzie Dern",
+      "rank": "5"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Nina Nunes",
+      "rank": "6"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Tecia Torres",
+      "rank": "7"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Michelle Waterson-Gomez",
+      "rank": "8"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Amanda Ribas",
+      "rank": "9"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Amanda Lemos",
+      "rank": "10"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Virna Jandiroba",
+      "rank": "11"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Angela Hill",
+      "rank": "12"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Jessica Penne",
+      "rank": "13"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Brianna Van Buren",
+      "rank": "14"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Strawweight",
+      "fighter": "Luana Pinheiro",
+      "rank": "15"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Valentina Shevchenko",
+      "rank": "0"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Jéssica Andrade",
+      "rank": "1"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Katlyn Cerminara",
+      "rank": "2"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Lauren Murphy",
+      "rank": "3"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Jennifer Maia",
+      "rank": "4"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Taila Santos",
+      "rank": "5"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Viviane Araújo",
+      "rank": "6"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Joanne Wood",
+      "rank": "7"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Andrea Lee",
+      "rank": "8"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Jessica Eye",
+      "rank": "9"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Cynthia Calvillo",
+      "rank": "10"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Alexa Grasso",
+      "rank": "11"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Roxanne Modafferi",
+      "rank": "12"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Maycee Barber",
+      "rank": "13"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Manon Fiorot",
+      "rank": "14"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Flyweight",
+      "fighter": "Casey O'Neill",
+      "rank": "15"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Julianna Peña",
+      "rank": "0"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Amanda Nunes",
+      "rank": "1"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Holly Holm",
+      "rank": "2"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Irene Aldana",
+      "rank": "3"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Aspen Ladd",
+      "rank": "4"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Ketlen Vieira",
+      "rank": "5"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Yana Santos",
+      "rank": "6"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Raquel Pennington",
+      "rank": "7"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Miesha Tate",
+      "rank": "8"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Sara McMann",
+      "rank": "9"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Macy Chiasson",
+      "rank": "10"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Lina Lansberg",
+      "rank": "11"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Pannie Kianzad",
+      "rank": "12"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Karol Rosa",
+      "rank": "13"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Julia Avila",
+      "rank": "14"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Bantamweight",
+      "fighter": "Norma Dumont",
+      "rank": "15"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Featherweight",
+      "fighter": "Amanda Nunes",
+      "rank": "0"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Kamaru Usman",
+      "rank": "1"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Alexander Volkanovski",
+      "rank": "2"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Israel Adesanya",
+      "rank": "3"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Francis Ngannou",
+      "rank": "4"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Charles Oliveira",
+      "rank": "5"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Jon Jones",
+      "rank": "6"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Max Holloway",
+      "rank": "7"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Dustin Poirier",
+      "rank": "8"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Stipe Miocic",
+      "rank": "9"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Brandon Moreno",
+      "rank": "10"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Petr Yan",
+      "rank": "11"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Glover Teixeira",
+      "rank": "12"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Robert Whittaker",
+      "rank": "13"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Jan Błachowicz",
+      "rank": "14"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Men's Pound-for-Pound",
+      "fighter": "Ciryl Gane",
+      "rank": "15"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Valentina Shevchenko",
+      "rank": "1"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Amanda Nunes",
+      "rank": "2"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Rose Namajunas",
+      "rank": "3"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Julianna Peña",
+      "rank": "4"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Zhang Weili",
+      "rank": "5"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Jéssica Andrade",
+      "rank": "6"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Holly Holm",
+      "rank": "7"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Carla Esparza",
+      "rank": "8"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Marina Rodriguez",
+      "rank": "9"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Katlyn Cerminara",
+      "rank": "10"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Yan Xiaonan",
+      "rank": "11"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Irene Aldana",
+      "rank": "12"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Lauren Murphy",
+      "rank": "13"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Mackenzie Dern",
+      "rank": "14"
+    },
+    {
+      "date": "2022-01-17",
+      "weightclass": "Women's Pound-for-Pound",
+      "fighter": "Aspen Ladd",
+      "rank": "15"
+    }
+  ]
+}
+  

@@ -1,5 +1,6 @@
 package com.example.uppercutu.api
 
+import retrofit2.Call
 import com.example.uppercutu.modelo.news.BoxingNews
 import com.example.uppercutu.util.Constants.Companion.API_KEY
 import retrofit2.Response
@@ -48,3 +49,22 @@ interface NewsApi {
         apiKey: String = API_KEY
     ): Response<BoxingNews>
 }
+
+interface GoogleCustomSearchApi {
+    @GET("customsearch/v1")
+    fun searchImages(
+        @Query("key") apiKey: String,
+        @Query("cx") cx: String,
+        @Query("q") query: String,
+        @Query("searchType") searchType: String = "image",
+        @Query("num") num: Int = 1
+    ): Call<SearchResponse>
+}
+
+data class SearchResponse(
+    val items: List<SearchResult>
+)
+
+data class SearchResult(
+    val link: String
+)

@@ -2,17 +2,24 @@ package com.example.uppercutu.api
 
 import android.util.Log
 import com.example.uppercutu.modelo.events.EventosItem
+import com.example.uppercutu.modelo.fighters.CareerStats
+import com.example.uppercutu.modelo.fighters.FightersItem
+import com.example.uppercutu.util.Constants
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
+import org.json.JSONArray
+import org.json.JSONObject
+import retrofit2.Call
+import retrofit2.Callback
 import java.io.IOException
 import java.net.HttpURLConnection
 import java.net.URL
-import com.example.uppercutu.util.Constants.Companion.API_KEY_MMA
-import org.json.JSONArray
+
+
 
 class SportApi {
 
@@ -30,6 +37,8 @@ class SportApi {
         }
     }
 
+
+
     private fun makeRequest(): Response {
         val request = Request.Builder()
             .url("https://sportapi7.p.rapidapi.com/api/v1/sport/boxing")
@@ -43,6 +52,10 @@ class SportApi {
     fun getSchedule(league: String, year: String): String {
         Log.d("definitiva",year)
         val endpoint = "https://api.sportsdata.io/v3/mma/scores/json/Schedule/$league/$year?key=8c50528362f34136b7dd308745c72b36"
+        return sendGetRequest(endpoint)
+    }
+    fun getFihters() : String{
+        val endpoint = "https://api.sportsdata.io/v3/mma/scores/json/Fighters?key=8c50528362f34136b7dd308745c72b36"
         return sendGetRequest(endpoint)
     }
 
@@ -69,6 +82,80 @@ class SportApi {
         }
 
         return eventosList
+    }
+
+    fun parseFighters(fightersJson: String): List<FightersItem> {
+        val fightersList = mutableListOf<FightersItem>()
+        // Agregar corchetes al principio y al final de la cadena completa
+        val jsonWithBrackets = "[$fightersJson]"
+        val jsonArray = JSONArray(jsonWithBrackets)
+        for (i in 0 until jsonArray.length()) {
+            // Obtener el JSON object actual
+            val jsonObject = jsonArray.getJSONObject(i)
+            // Convertir el JSON object actual a una cadena
+            val jsonString = jsonObject.toString()
+            // Agregar corchetes al principio y al final de la cadena JSON
+            val jsonStringWithBrackets = "[$jsonString]"
+            // Parsear la cadena JSON con corchetes adicionales
+            val jsonArrayWithBrackets = JSONArray(jsonStringWithBrackets)
+            // Obtener el objeto JSON del primer (y único) elemento en el nuevo arreglo JSON
+            val jsonObjectWithBrackets = jsonArrayWithBrackets.getJSONObject(0)
+            // Crear el objeto FightersItem a partir del objeto JSON con corchetes adicionales
+            Log.d("Response", "Response: $fightersJson")
+
+            val fighter = FightersItem(
+                FighterId = jsonObjectWithBrackets.getInt("FighterId"),
+                FirstName = jsonObjectWithBrackets.getString("FirstName"),
+                LastName = jsonObjectWithBrackets.getString("LastName"),
+                Nickname = jsonObjectWithBrackets.getString("Nickname"),
+                WeightClass = jsonObjectWithBrackets.getString("WeightClass"),
+                BirthDate = jsonObjectWithBrackets.getString("BirthDate"),
+                Height = jsonObjectWithBrackets.optDouble("Height", 0.0),
+                Weight = jsonObjectWithBrackets.optDouble("Weight", 0.0),
+                Reach = jsonObjectWithBrackets.optDouble("Reach", 0.0),
+                Wins = jsonObjectWithBrackets.getInt("Wins"),
+                Losses = jsonObjectWithBrackets.getInt("Losses"),
+                Draws = jsonObjectWithBrackets.getInt("Draws"),
+                NoContests = jsonObjectWithBrackets.getInt("NoContests"),
+                TechnicalKnockouts = jsonObjectWithBrackets.getInt("TechnicalKnockouts"),
+                TechnicalKnockoutLosses = jsonObjectWithBrackets.getInt("TechnicalKnockoutLosses"),
+                Submissions = jsonObjectWithBrackets.getInt("Submissions"),
+                SubmissionLosses = jsonObjectWithBrackets.getInt("SubmissionLosses"),
+                TitleWins = jsonObjectWithBrackets.getInt("TitleWins"),
+                TitleLosses = jsonObjectWithBrackets.getInt("TitleLosses"),
+                TitleDraws = jsonObjectWithBrackets.getInt("TitleDraws"),
+                CareerStats = parseCareerStats(jsonObjectWithBrackets.getJSONObject("CareerStats"))
+            )
+            fightersList.add(fighter)
+        }
+
+        return fightersList
+    }
+
+
+
+
+
+    private fun parseCareerStats(statsJson: JSONObject?): CareerStats {
+        return if (statsJson != null) {
+            CareerStats(
+                FighterId = statsJson.getInt("FighterId"),
+                FirstName = statsJson.getString("FirstName"),
+                LastName = statsJson.getString("LastName"),
+                SigStrikesLandedPerMinute = statsJson.optDouble("SigStrikesLandedPerMinute", 0.0),
+                SigStrikeAccuracy = statsJson.optDouble("SigStrikeAccuracy", 0.0),
+                TakedownAverage = statsJson.optDouble("TakedownAverage", 0.0),
+                SubmissionAverage = statsJson.optDouble("SubmissionAverage", 0.0),
+                KnockoutPercentage = statsJson.optDouble("KnockoutPercentage", 0.0),
+                TechnicalKnockoutPercentage = statsJson.optDouble(
+                    "TechnicalKnockoutPercentage",
+                    0.0
+                ),
+                DecisionPercentage = statsJson.optDouble("DecisionPercentage", 0.0)
+            )
+        } else {
+            CareerStats(0.0, 0, "", 0.0, "", 0.0, 0.0, 0.0, 0.0, 0.0)
+        }
     }
 
 

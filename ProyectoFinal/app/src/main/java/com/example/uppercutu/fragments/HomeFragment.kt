@@ -26,6 +26,10 @@ import com.example.uppercutu.api.NewsApi
 import com.example.uppercutu.api.RetrofitInstance
 import com.example.uppercutu.api.SportApi
 import com.example.uppercutu.modelo.news.Article
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -102,6 +106,34 @@ class HomeFragment : Fragment() {
             }
         })
 
+// Obtén una instancia de Firestore
+        val db = FirebaseFirestore.getInstance()
+
+// Nombre de tu colección
+        val collectionName = "rankings"
+
+// Obtén una referencia a la colección
+        val collectionRef = db.collection(collectionName)
+
+// Realiza la consulta para obtener todos los documentos de la colección
+        Log.d("prueba", "antes")
+        collectionRef.get()
+            .addOnSuccessListener { documents ->
+                Log.d("prueba", "entra?")
+                // Itera sobre los documentos obtenidos
+                var count : Int = documents.size()
+                Log.d("prueba", count.toString())
+                for (document in documents) {
+                    // Accede a los datos de cada documento
+                    val data = document.data
+                    // Haz algo con los datos...
+                }
+            }
+            .addOnFailureListener { exception ->
+
+            }
+
+
     }
 
     private fun setupRecyclerView() {
@@ -137,20 +169,6 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun fetchNewsEsp() {
-        val api = RetrofitInstance.retrofit.create(NewsApi::class.java)
-        GlobalScope.launch(Dispatchers.Main) {
-            val response = api.boxingNewsEsp()
-            if (response.isSuccessful) {
-                val boxingNews = response.body()
-                articles = boxingNews?.articles ?: emptyList()
-                adapter.updateArticles(articles)
-            } else {
-                Toast.makeText(context, "Error fetching news", Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
-
     private fun fetchEvents() {
         val sportApi = SportApi()
         GlobalScope.launch(Dispatchers.Main) {
@@ -168,6 +186,22 @@ class HomeFragment : Fragment() {
             }
         }
     }
+
+    private fun fetchNewsEsp() {
+        val api = RetrofitInstance.retrofit.create(NewsApi::class.java)
+        GlobalScope.launch(Dispatchers.Main) {
+            val response = api.boxingNewsEsp()
+            if (response.isSuccessful) {
+                val boxingNews = response.body()
+                articles = boxingNews?.articles ?: emptyList()
+                adapter.updateArticles(articles)
+            } else {
+                Toast.makeText(context, "Error fetching news", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+
 
 
     private fun showYearPickerDialog() {

@@ -117,6 +117,14 @@ dependencies {
 
     implementation ("com.google.android.material:material:1.5.0")
     implementation ("com.wdullaer:materialdatetimepicker:4.2.3")
+
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
+    implementation ("androidx.cardview:cardview:1.0.0")
+
+    implementation ("androidx.fragment:fragment-ktx:1.4.0")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
+
+    implementation ("org.json:json:20210307")
 }
 
 
