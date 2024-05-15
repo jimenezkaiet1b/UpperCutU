@@ -56,7 +56,7 @@ class RankingFragment : Fragment() {
         spinnerFecha?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val selectedDate = parent.getItemAtPosition(position).toString()
-                updateDataForDate(selectedDate,context)
+                updateDataForDate(selectedDate, context)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
@@ -64,7 +64,7 @@ class RankingFragment : Fragment() {
             }
         }
         // Cargar datos iniciales
-        val initialDate = spinnerFecha?.selectedItem.toString()
+        val initialDate = spinnerFecha?.selectedItem?.toString() ?: "2019-01-01"
         updateDataForDate(initialDate, context)
     }
 
@@ -76,7 +76,7 @@ class RankingFragment : Fragment() {
             "2022-01-17" -> jsonReader.loadJsonFromFile(context, "filteredData_2022.json")
             "2023-01-17" -> jsonReader.loadJsonFromFile(context, "filteredData_2023.json")
             "2024-01-16" -> jsonReader.loadJsonFromFile(context, "filteredData_2024.json")
-            else ->  jsonReader.loadJsonFromFile(context, "filteredData_2019.json")
+            else -> jsonReader.loadJsonFromFile(context, "filteredData_2019.json")
         }
         Log.d("RankingFragment", "aioi: $jsonData")
         jsonData?.let {
@@ -92,7 +92,8 @@ class RankingFragment : Fragment() {
                     fighters.add(Fighter(fighterName, fighterRank, fighterWeightClass, fighterDate, ""))
                 }
                 allFighters = fighters
-                updateFightersWithImages(fighters)
+                fightersAdapter.updateFighters(fighters)
+//                updateFightersWithImages(fighters)
             }
         } ?: Log.e("RankingFragment", "Error loading JSON data for date: $targetDate")
     }
@@ -132,44 +133,34 @@ class RankingFragment : Fragment() {
         fightersAdapter.updateFighters(filteredFighters)
     }
 
-    private fun updateFightersWithImages(fighters: List<Fighter>) {
-        val apiKey = Constants.API_KEYIMAGES
-        val cx = Constants.CX_ID
-
-        val callList = mutableListOf<Call<SearchResponse>>()
-
-        for (fighter in fighters) {
-            fighter.name?.let { name ->
-                val call = RetrofitInstance.RetrofitInstance.api.searchImages(apiKey, cx, name)
-                callList.add(call)
-                call.enqueue(object : Callback<SearchResponse> {
-
-                    override fun onResponse(call: Call<SearchResponse>, response: Response<SearchResponse>) {
-                        if (response.isSuccessful) {
-                            val imageUrl = response.body()?.items?.firstOrNull()?.link ?: ""
-                            fighter.imageUrl = imageUrl
-                            Log.d("RankingFragment", imageUrl)
-                        }
-                    }
-
-                    override fun onFailure(call: Call<SearchResponse>, t: Throwable) {
-                        Log.e("RankingFragment", "Error fetching image: ${t.message}")
-                    }
-                })
-            }
-        }
-
-        // Notificar al adaptador después de todas las solicitudes
-        for (call in callList) {
-            call.clone().enqueue(object : Callback<SearchResponse> {
-                override fun onResponse(call: Call<SearchResponse>, response: Response<SearchResponse>) {
-                    fightersAdapter.notifyDataSetChanged()
-                }
-
-                override fun onFailure(call: Call<SearchResponse>, t: Throwable) {
-                    // No hacer nada aquí, ya que los fallos individuales ya están registrados
-                }
-            })
-        }
-    }
+//    private fun updateFightersWithImages(fighters: List<Fighter>) {
+//        val apiKey = Constants.API_KEYIMAGES
+//        val cx = Constants.CX_ID
+//
+//        val callList = mutableListOf<Call<SearchResponse>>()
+//
+//        for (fighter in fighters) {
+//            fighter.name?.let { name ->
+//                val call = RetrofitInstance.RetrofitInstance.api.searchImages(apiKey, cx, name)
+//                callList.add(call)
+//                call.enqueue(object : Callback<SearchResponse> {
+//
+//                    override fun onResponse(call: Call<SearchResponse>, response: Response<SearchResponse>) {
+//                        if (response.isSuccessful) {
+//                            val imageUrl = response.body()?.items?.firstOrNull()?.link ?: ""
+//                            fighter.imageUrl = imageUrl
+//                            Log.d("RankingFragment", imageUrl)
+//                        }
+//                    }
+//
+//                    override fun onFailure(call: Call<SearchResponse>, t: Throwable) {
+//                        Log.e("RankingFragment", "Error fetching image: ${t.message}")
+//                    }
+//                })
+//            }
+//        }
+//
+//        // Notificar al adaptador después de todas las solicitudes
+//        fightersAdapter.updateFighters(fighters)
+//    }
 }

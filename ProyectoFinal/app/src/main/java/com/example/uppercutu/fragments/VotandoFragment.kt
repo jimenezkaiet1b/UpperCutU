@@ -1,10 +1,10 @@
 package com.example.uppercutu.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -12,14 +12,20 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uppercutu.R
 import com.example.uppercutu.adapters.VotacionAdapter
-import com.example.uppercutu.adapters.VotadosAdapter
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import java.util.Date
+import com.example.uppercutu.adapters.VotacionesAdapter
+import com.example.uppercutu.data.Votacion
 
 class VotandoFragment : Fragment() {
-    private  lateinit var  votacionAdapter: VotacionAdapter
-    private lateinit var rvVotar: RecyclerView
+
+    private lateinit var goBackButton: ImageButton
+    private lateinit var boxer1NameTextView: TextView
+    private lateinit var boxer2NameTextView: TextView
+    private lateinit var resulBox1TextView: TextView
+    private lateinit var resulBox2TextView: TextView
+    private lateinit var votacionesRecyclerView: RecyclerView
+    private  lateinit var btnVotarbox1:Button
+    private  lateinit var btnVotarbox2:Button
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,49 +35,44 @@ class VotandoFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setup(view)
 
-        // Obtener los datos pasados a través de arguments
-        val boxer1Name = arguments?.getString("boxer1Name")
-        val boxer2Name = arguments?.getString("boxer2Name")
-        val rounds = arguments?.getInt("numberOfRounds") ?: 0
+        // Asignar las vistas
+        goBackButton = view.findViewById(R.id.goBack)
+        boxer1NameTextView = view.findViewById(R.id.box1nombre)
+        boxer2NameTextView = view.findViewById(R.id.box2nombre)
+        resulBox1TextView = view.findViewById(R.id.resulBox1)
+        resulBox2TextView = view.findViewById(R.id.resulBox2)
+        votacionesRecyclerView = view.findViewById(R.id.votacionesRv)
 
-        // Asignar los datos a las vistas
-        view.findViewById<TextView>(R.id.box1nombre).text = boxer1Name
-        view.findViewById<TextView>(R.id.box2nombre).text = boxer2Name
+        var rounds = 0
 
-        // Configurar el RecyclerView
-        recyclerViewSetUp(rounds)
-    }
-    private fun setup(view: View) {
-        val boxer1Name = arguments?.getString("boxer1Name")
-        val boxer2Name = arguments?.getString("boxer2Name")
-        boxer1Name?.let { Log.d("HOLA", it) }
+        votacionesRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        votacionesRecyclerView.adapter = VotacionAdapter(getData(), { /* nada */ }, { /* nada */ })
 
-        view.findViewById<TextView>(R.id.box1nombre).text = boxer1Name
-        view.findViewById<TextView>(R.id.box2nombre).text = boxer2Name
+        arguments?.let {
+            val boxer1Name = it.getString("boxer1Name")
+            val boxer2Name = it.getString("boxer2Name")
+            val resulBox1 = it.getInt("resulBox1")
+            val resulBox2 = it.getInt("resulBox2")
+            rounds = it.getInt("rounds")
 
-        view.findViewById<ImageButton>(R.id.goBack).setOnClickListener {
-            parentFragmentManager.popBackStack()
+            boxer1NameTextView.text = boxer1Name
+            boxer2NameTextView.text = boxer2Name
+            resulBox1TextView.text = resulBox1.toString()
+            resulBox2TextView.text = resulBox2.toString()
         }
 
+        val adapter = VotacionesAdapter(rounds)
+        votacionesRecyclerView.adapter = adapter
 
+
+
+        goBackButton.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
     }
 
-
-    private fun recyclerViewSetUp(rounds: Int) {
-        // Obtén una referencia al RecyclerView desde el layout
-        rvVotar = view?.findViewById(R.id.votacionesRv) ?: return
-
-        // Crea una instancia del adaptador VotacionAdapter
-        votacionAdapter = VotacionAdapter(rounds)
-
-        // Establece un LayoutManager en el RecyclerView
-        rvVotar.layoutManager = LinearLayoutManager(requireContext())
-
-        // Establece el adaptador en el RecyclerView
-        rvVotar.adapter = votacionAdapter
+    private fun getData(): List<Votacion> {
+        return listOf()
     }
-
-
 }

@@ -9,8 +9,8 @@ import android.widget.EditText
 import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import com.example.uppercutu.R
-import com.example.uppercutu.adapters.VotadosAdapter
 import com.example.uppercutu.data.Votacion
+
 class CustomCartaPuntuaje : Fragment() {
 
     var datosListener: DatosListener? = null
@@ -40,20 +40,11 @@ class CustomCartaPuntuaje : Fragment() {
 
             datosListener?.onDatosEnviados(boxer1NameText, boxer2NameText, roundsValue)
 
-            val votarFragment = VotarFragment()
-
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainerView, votarFragment)
-                .addToBackStack(null)
-                .commit()
+            parentFragmentManager.popBackStack()
         }
     }
 
     interface DatosListener {
         fun onDatosEnviados(boxer1Name: String, boxer2Name: String, rounds: Int)
     }
-
-
-
-
 }

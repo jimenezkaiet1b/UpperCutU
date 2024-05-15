@@ -1,6 +1,7 @@
 package com.example.uppercutu.adapters
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,10 +10,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uppercutu.R
 import com.example.uppercutu.modelo.events.EventosItem
+import com.example.uppercutu.modelo.news.Article
 
 class EventosAdapter(private val context: Context, private var eventos: List<EventosItem>) :
     RecyclerView.Adapter<EventosAdapter.EventoViewHolder>() {
-
+    private var filteredEvents: List<EventosItem> = eventos
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventoViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.horarios_list, parent, false)
         return EventoViewHolder(view)
@@ -38,15 +40,26 @@ class EventosAdapter(private val context: Context, private var eventos: List<Eve
             dateTimeTextView.text = evento.DateTime
             shortNameTextView.text = evento.ShortName
 
-            // Aquí podrías cargar la imagen del evento si fuera necesario
-            // Puedes usar una biblioteca como Picasso o Glide para cargar imágenes desde URL
-            // Ejemplo: Picasso.get().load(evento.imageUrl).into(urlImageView)
         }
     }
 
-    // Este método actualiza la lista de eventos y notifica al RecyclerView sobre los cambios
     fun updateEvents(events: List<EventosItem>) {
         this.eventos = events
         notifyDataSetChanged()
     }
+
+    fun filtrar(query: String) {
+        filteredEvents = if (query.isEmpty()) {
+            eventos
+        } else {
+            eventos.filter { evento ->
+                evento.ShortName.contains(query, ignoreCase = true) ||
+                        evento.Name.contains(query, ignoreCase = true)
+            }
+        }
+        notifyDataSetChanged()
+    }
+
+
+
 }

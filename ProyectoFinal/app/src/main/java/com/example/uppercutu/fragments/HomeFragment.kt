@@ -25,6 +25,7 @@ import com.example.uppercutu.adapters.NewsAdapter
 import com.example.uppercutu.api.NewsApi
 import com.example.uppercutu.api.RetrofitInstance
 import com.example.uppercutu.api.SportApi
+import com.example.uppercutu.modelo.events.EventosItem
 import com.example.uppercutu.modelo.news.Article
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
@@ -42,6 +43,7 @@ class HomeFragment : Fragment() {
     private lateinit var adapter: NewsAdapter
     private lateinit var adapterEventos: EventosAdapter
     private var articles: List<Article> = emptyList()
+    private var eventos: List<EventosItem> = emptyList()
     private lateinit var date :String
     private var empresa : String = "UFC"
 
@@ -56,21 +58,7 @@ class HomeFragment : Fragment() {
         inflater.inflate(R.menu.search_filter_menu, menu)
         super.onCreateOptionsMenu(menu, inflater)
     }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.searchFilterMenu_searchNoticias -> {
 
-                fetchNews()
-                true
-            }
-            R.id.searchFilterMenu_searchEventos -> {
-
-                fetchEvents()
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         date = "2024"
@@ -97,42 +85,15 @@ class HomeFragment : Fragment() {
         val searchView = view.findViewById<SearchView>(R.id.home_searchView)
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
+
                 return false
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                adapter.filterArticles(newText.orEmpty())
+                newText?.let { adapterEventos.filtrar(it) }
                 return true
             }
         })
-
-// Obtén una instancia de Firestore
-        val db = FirebaseFirestore.getInstance()
-
-// Nombre de tu colección
-        val collectionName = "rankings"
-
-// Obtén una referencia a la colección
-        val collectionRef = db.collection(collectionName)
-
-// Realiza la consulta para obtener todos los documentos de la colección
-        Log.d("prueba", "antes")
-        collectionRef.get()
-            .addOnSuccessListener { documents ->
-                Log.d("prueba", "entra?")
-                // Itera sobre los documentos obtenidos
-                var count : Int = documents.size()
-                Log.d("prueba", count.toString())
-                for (document in documents) {
-                    // Accede a los datos de cada documento
-                    val data = document.data
-                    // Haz algo con los datos...
-                }
-            }
-            .addOnFailureListener { exception ->
-
-            }
-
 
     }
 
@@ -230,6 +191,7 @@ class HomeFragment : Fragment() {
 
         dialog.show()
     }
+
 
 
 

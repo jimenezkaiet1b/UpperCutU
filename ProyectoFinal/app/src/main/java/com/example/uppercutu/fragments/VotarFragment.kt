@@ -1,4 +1,3 @@
-// VotarFragment.kt
 package com.example.uppercutu.fragments
 
 import android.os.Bundle
@@ -6,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uppercutu.R
@@ -14,19 +12,17 @@ import com.example.uppercutu.adapters.VotadosAdapter
 import com.example.uppercutu.data.Votacion
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-import java.util.*
 class VotarFragment : Fragment(), CustomCartaPuntuaje.DatosListener {
 
     private lateinit var votadosAdapter: VotadosAdapter
     private lateinit var rvVotar: RecyclerView
-    private val exampleList = ArrayList<Votacion>() // Declaración de la lista de datos
+    private val exampleList = ArrayList<Votacion>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_votar, container, false)
-        return view
+        return inflater.inflate(R.layout.fragment_votar, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -38,6 +34,7 @@ class VotarFragment : Fragment(), CustomCartaPuntuaje.DatosListener {
         val addVotar: FloatingActionButton = view.findViewById(R.id.anadirVotacion)
         addVotar.setOnClickListener {
             val customCartaPuntuajeFragment = CustomCartaPuntuaje()
+            customCartaPuntuajeFragment.datosListener = this
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragmentContainerView, customCartaPuntuajeFragment)
                 .addToBackStack(null)
@@ -47,22 +44,30 @@ class VotarFragment : Fragment(), CustomCartaPuntuaje.DatosListener {
         rvVotar = view.findViewById(R.id.recyclerVotar)
         rvVotar.layoutManager = LinearLayoutManager(requireContext())
 
-        // Aquí es donde deberías obtener tus datos reales y asignarlos a exampleList
-        // Por ejemplo:
-        // exampleList = obtenerDatosReales()
-
-        votadosAdapter = VotadosAdapter(exampleList)
+        votadosAdapter = VotadosAdapter(exampleList,
+            { votacion -> // Navegar a VotandoFragment y pasar los datos de la votación seleccionada
+                val votandoFragment = VotandoFragment()
+                val bundle = Bundle()
+                bundle.putString("boxer1Name", votacion.boxer1Name)
+                bundle.putString("boxer2Name", votacion.boxer2Name)
+                bundle.putInt("rounds", votacion.numberOfRounds)
+                votandoFragment.arguments = bundle
+                parentFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentContainerView, votandoFragment)
+                    .addToBackStack(null)
+                    .commit()
+            },
+            { position -> // Eliminar el elemento de la lista y notificar al adaptador
+                exampleList.removeAt(position)
+                votadosAdapter.notifyItemRemoved(position)
+            }
+        )
         rvVotar.adapter = votadosAdapter
-
-        val customCartaPuntuajeFragment = CustomCartaPuntuaje()
-        customCartaPuntuajeFragment.datosListener = this
     }
 
     override fun onDatosEnviados(boxer1Name: String, boxer2Name: String, rounds: Int) {
-        // Aquí recibes los datos desde CustomCartaPuntuaje
-        // y los puedes utilizar para actualizar el RecyclerView
         val nuevaVotacion = Votacion(boxer1Name, boxer2Name, rounds)
-        exampleList.add(nuevaVotacion) // Agregar la nueva votación a la lista
-        votadosAdapter.notifyDataSetChanged() // Notificar al adaptador sobre el cambio en los datos
+        exampleList.add(nuevaVotacion)
+        votadosAdapter.notifyDataSetChanged()
     }
 }
