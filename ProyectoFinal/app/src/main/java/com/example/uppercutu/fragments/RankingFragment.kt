@@ -93,7 +93,7 @@ class RankingFragment : Fragment() {
                 }
                 allFighters = fighters
                 fightersAdapter.updateFighters(fighters)
-//                updateFightersWithImages(fighters)
+                updateFightersWithImages(fighters) // Llamada para actualizar imágenes
             }
         } ?: Log.e("RankingFragment", "Error loading JSON data for date: $targetDate")
     }
@@ -131,36 +131,30 @@ class RankingFragment : Fragment() {
     private fun filterFightersByWeightClass(weightClass: String) {
         val filteredFighters = allFighters.filter { it.weightClass == weightClass }
         fightersAdapter.updateFighters(filteredFighters)
+        updateFightersWithImages(filteredFighters) // Llamada para actualizar imágenes
     }
 
-//    private fun updateFightersWithImages(fighters: List<Fighter>) {
-//        val apiKey = Constants.API_KEYIMAGES
-//        val cx = Constants.CX_ID
-//
-//        val callList = mutableListOf<Call<SearchResponse>>()
-//
-//        for (fighter in fighters) {
-//            fighter.name?.let { name ->
-//                val call = RetrofitInstance.RetrofitInstance.api.searchImages(apiKey, cx, name)
-//                callList.add(call)
-//                call.enqueue(object : Callback<SearchResponse> {
-//
-//                    override fun onResponse(call: Call<SearchResponse>, response: Response<SearchResponse>) {
-//                        if (response.isSuccessful) {
-//                            val imageUrl = response.body()?.items?.firstOrNull()?.link ?: ""
-//                            fighter.imageUrl = imageUrl
-//                            Log.d("RankingFragment", imageUrl)
-//                        }
-//                    }
-//
-//                    override fun onFailure(call: Call<SearchResponse>, t: Throwable) {
-//                        Log.e("RankingFragment", "Error fetching image: ${t.message}")
-//                    }
-//                })
-//            }
-//        }
-//
-//        // Notificar al adaptador después de todas las solicitudes
-//        fightersAdapter.updateFighters(fighters)
-//    }
+    private fun updateFightersWithImages(fighters: List<Fighter>) {
+        for (fighter in fighters) {
+            fighter.name?.let { name ->
+                RetrofitInstance.RetrofitInstance.api.searchImages(
+                    Constants.API_KEYIMAGES,
+                    Constants.CX_ID,
+                    name
+                ).enqueue(object : Callback<SearchResponse> {
+                    override fun onResponse(call: Call<SearchResponse>, response: Response<SearchResponse>) {
+                        if (response.isSuccessful) {
+                            val imageUrl = response.body()?.items?.firstOrNull()?.link ?: ""
+                            fighter.imageUrl = imageUrl
+                            fightersAdapter.updateFighters(fighters)
+                        }
+                    }
+
+                    override fun onFailure(call: Call<SearchResponse>, t: Throwable) {
+                        Log.e("RankingFragment", "Error fetching image: ${t.message}")
+                    }
+                })
+            }
+        }
+    }
 }

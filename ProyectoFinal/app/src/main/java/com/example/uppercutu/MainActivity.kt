@@ -1,7 +1,7 @@
 package com.example.uppercutu
 
-import com.example.uppercutu.fragments.HomeFragment
 import com.example.uppercutu.fragments.VotarFragment
+import com.example.uppercutu.fragments.HomeFragment
 import android.content.Context
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
@@ -20,7 +20,6 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.example.uppercutu.fragments.PerfilFragment
 import com.example.uppercutu.fragments.RankingFragment
-import com.example.uppercutu.fragments.UserFragment
 
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView

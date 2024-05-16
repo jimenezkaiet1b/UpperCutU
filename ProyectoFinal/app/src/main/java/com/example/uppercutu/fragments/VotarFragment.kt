@@ -1,5 +1,6 @@
 package com.example.uppercutu.fragments
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,8 @@ import com.example.uppercutu.R
 import com.example.uppercutu.adapters.VotadosAdapter
 import com.example.uppercutu.data.Votacion
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 class VotarFragment : Fragment(), CustomCartaPuntuaje.DatosListener {
 
@@ -45,7 +48,7 @@ class VotarFragment : Fragment(), CustomCartaPuntuaje.DatosListener {
         rvVotar.layoutManager = LinearLayoutManager(requireContext())
 
         votadosAdapter = VotadosAdapter(exampleList,
-            { votacion -> // Navegar a VotandoFragment y pasar los datos de la votación seleccionada
+            { votacion ->
                 val votandoFragment = VotandoFragment()
                 val bundle = Bundle()
                 bundle.putString("boxer1Name", votacion.boxer1Name)
@@ -57,7 +60,7 @@ class VotarFragment : Fragment(), CustomCartaPuntuaje.DatosListener {
                     .addToBackStack(null)
                     .commit()
             },
-            { position -> // Eliminar el elemento de la lista y notificar al adaptador
+            { position ->
                 exampleList.removeAt(position)
                 votadosAdapter.notifyItemRemoved(position)
             }
@@ -70,4 +73,6 @@ class VotarFragment : Fragment(), CustomCartaPuntuaje.DatosListener {
         exampleList.add(nuevaVotacion)
         votadosAdapter.notifyDataSetChanged()
     }
+
+
 }

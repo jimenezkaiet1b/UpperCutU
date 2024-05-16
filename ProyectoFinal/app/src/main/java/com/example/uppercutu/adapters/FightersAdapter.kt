@@ -1,5 +1,6 @@
 package com.example.uppercutu.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,8 +11,12 @@ import com.bumptech.glide.Glide
 import com.example.uppercutu.R
 import com.example.uppercutu.api.RetrofitInstance
 import com.example.uppercutu.api.SearchResponse
+import com.example.uppercutu.api.UnsplashApiService
 import com.example.uppercutu.modelo.fighters.Fighter
 import com.example.uppercutu.util.Constants
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -40,11 +45,31 @@ class FightersAdapter(private var fightersList: List<Fighter>) :
         holder.fighterWeightClassTextView.text = currentItem.weightClass
         holder.fighterDateTextView.text = currentItem.date
 
-        // Load image
-        currentItem.imageUrl?.let {
-            Glide.with(holder.itemView.context).load(it).into(holder.fighterImageView)
+        // Fetch and load image using Google Custom Search API and Glide
+        currentItem.imageUrl?.let { imageUrl ->
+            Glide.with(holder.itemView.context).load(imageUrl).into(holder.fighterImageView)
+        } ?: run {
+            currentItem.name?.let {
+                RetrofitInstance.RetrofitInstance.api.searchImages(
+                    Constants.API_KEYIMAGES,
+                    Constants.CX_ID,
+                    it
+                ).enqueue(object : Callback<SearchResponse> {
+                    override fun onResponse(call: Call<SearchResponse>, response: Response<SearchResponse>) {
+                        if (response.isSuccessful) {
+                            val imageUrl = response.body()?.items?.firstOrNull()?.link ?: ""
+                            currentItem.imageUrl = imageUrl
+                            Glide.with(holder.itemView.context).load(imageUrl).into(holder.fighterImageView)
+                        }
+                    }
+
+                    override fun onFailure(call: Call<SearchResponse>, t: Throwable) {
+                    }
+                })
+            }
         }
     }
+
 
     override fun getItemCount(): Int {
         return fightersList.size

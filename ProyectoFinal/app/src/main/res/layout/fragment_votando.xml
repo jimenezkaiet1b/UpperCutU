@@ -6,15 +6,6 @@
     android:layout_height="match_parent"
     android:id="@+id/votandoFragment">
 
-    <ImageButton
-        android:id="@+id/goBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_keyboard_arrow_left_24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:backgroundTint="@android:color/transparent"/>
-
     <LinearLayout
         android:id="@+id/llNombres"
         android:layout_width="wrap_content"
@@ -83,8 +74,19 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/votacionesRv"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="570dp"
+        app:layout_constraintBottom_toTopOf="@+id/goBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:text="GUARDAR"
+        android:id="@+id/goBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,54 +12,46 @@ import com.example.uppercutu.R
 import com.example.uppercutu.modelo.events.EventosItem
 import com.example.uppercutu.modelo.news.Article
 
-class EventosAdapter(private val context: Context, private var eventos: List<EventosItem>) :
-    RecyclerView.Adapter<EventosAdapter.EventoViewHolder>() {
-    private var filteredEvents: List<EventosItem> = eventos
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventoViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.horarios_list, parent, false)
-        return EventoViewHolder(view)
+class EventosAdapter(
+    private val context: Context,
+    private var eventos: List<EventosItem>
+) : RecyclerView.Adapter<EventosAdapter.ViewHolder>() {
+
+    private var eventosFiltrados: List<EventosItem> = eventos
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val view = LayoutInflater.from(context).inflate(R.layout.horarios_list, parent, false)
+        return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: EventoViewHolder, position: Int) {
-        val evento = eventos[position]
-        holder.bind(evento)
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val evento = eventosFiltrados[position]
+        holder.eventoNombreTextView.text = evento.Name
     }
 
     override fun getItemCount(): Int {
-        return eventos.size
+        return eventosFiltrados.size
     }
 
-    inner class EventoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val nameTextView: TextView = itemView.findViewById(R.id.even_name)
-        private val dateTimeTextView: TextView = itemView.findViewById(R.id.dateTimeEvento)
-        private val shortNameTextView: TextView = itemView.findViewById(R.id.shortName)
-        private val urlImageView: ImageView = itemView.findViewById(R.id.urlImage)
-
-        fun bind(evento: EventosItem) {
-            nameTextView.text = evento.Name
-            dateTimeTextView.text = evento.DateTime
-            shortNameTextView.text = evento.ShortName
-
-        }
-    }
-
-    fun updateEvents(events: List<EventosItem>) {
-        this.eventos = events
+    fun updateEvents(eventos: List<EventosItem>) {
+        this.eventos = eventos
+        this.eventosFiltrados = eventos
         notifyDataSetChanged()
     }
 
-    fun filtrar(query: String) {
-        filteredEvents = if (query.isEmpty()) {
+    fun filtrar(texto: String) {
+        eventosFiltrados = if (texto.isEmpty()) {
             eventos
         } else {
-            eventos.filter { evento ->
-                evento.ShortName.contains(query, ignoreCase = true) ||
-                        evento.Name.contains(query, ignoreCase = true)
+            eventos.filter {
+                it.Name.contains(texto, ignoreCase = true)
             }
         }
         notifyDataSetChanged()
     }
 
-
-
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val eventoNombreTextView: TextView = itemView.findViewById(R.id.even_name)
+    }
 }
+
