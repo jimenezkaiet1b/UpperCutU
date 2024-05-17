@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uppercutu.R
 import com.example.uppercutu.adapters.FightersAdapter
+import com.example.uppercutu.api.ImageUrlStorage
 import com.example.uppercutu.api.JsonReader
 import com.example.uppercutu.api.RetrofitInstance
 import com.example.uppercutu.api.SearchResponse
@@ -37,7 +38,7 @@ class RankingFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        super.onViewCreated(view,savedInstanceState)
         setupRecyclerView(view)
         setup(requireContext())
         setupButtons(view)
@@ -45,7 +46,7 @@ class RankingFragment : Fragment() {
 
     private fun setupRecyclerView(view: View) {
         recyclerView = view.findViewById(R.id.rvPesos)
-        fightersAdapter = FightersAdapter(emptyList())
+        fightersAdapter = FightersAdapter(emptyList(), requireContext())
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 3)
         recyclerView.adapter = fightersAdapter
     }
@@ -137,23 +138,30 @@ class RankingFragment : Fragment() {
     private fun updateFightersWithImages(fighters: List<Fighter>) {
         for (fighter in fighters) {
             fighter.name?.let { name ->
-                RetrofitInstance.RetrofitInstance.api.searchImages(
-                    Constants.API_KEYIMAGES,
-                    Constants.CX_ID,
-                    name
-                ).enqueue(object : Callback<SearchResponse> {
-                    override fun onResponse(call: Call<SearchResponse>, response: Response<SearchResponse>) {
-                        if (response.isSuccessful) {
-                            val imageUrl = response.body()?.items?.firstOrNull()?.link ?: ""
-                            fighter.imageUrl = imageUrl
-                            fightersAdapter.updateFighters(fighters)
+                val storedImageUrl = ImageUrlStorage.getImageUrl(requireContext(), name)
+                if (storedImageUrl != null) {
+                    fighter.imageUrl = storedImageUrl
+                    fightersAdapter.updateFighters(fighters)
+                } else {
+                    RetrofitInstance.RetrofitInstance.api.searchImages(
+                        Constants.API_KEYIMAGES,
+                        Constants.CX_ID,
+                        name
+                    ).enqueue(object : Callback<SearchResponse> {
+                        override fun onResponse(call: Call<SearchResponse>, response: Response<SearchResponse>) {
+                            if (response.isSuccessful) {
+                                val imageUrl = response.body()?.items?.firstOrNull()?.link ?: ""
+                                fighter.imageUrl = imageUrl
+                                ImageUrlStorage.saveImageUrl(requireContext(), name, imageUrl)
+                                fightersAdapter.updateFighters(fighters)
+                            }
                         }
-                    }
 
-                    override fun onFailure(call: Call<SearchResponse>, t: Throwable) {
-                        Log.e("RankingFragment", "Error fetching image: ${t.message}")
-                    }
-                })
+                        override fun onFailure(call: Call<SearchResponse>, t: Throwable) {
+                            Log.e("RankingFragment", "Error fetching image: ${t.message}")
+                        }
+                    })
+                }
             }
         }
     }

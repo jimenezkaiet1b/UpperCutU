@@ -24,7 +24,7 @@ object FirestoreUtilities {
         fullName: String,
         birthDate: String,
         callback: (Boolean) -> Unit
-    ) {
+    ){
         val currentUser = auth.currentUser
         currentUser?.let { user ->
             val userData = hashMapOf(

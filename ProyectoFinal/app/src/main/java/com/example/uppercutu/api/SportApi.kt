@@ -25,29 +25,7 @@ class SportApi {
 
     private val client = OkHttpClient()
 
-    fun fetchBoxingData(callback: (String) -> Unit) {
-        GlobalScope.launch(Dispatchers.IO) {
-            try {
-                val response = makeRequest()
-                val responseBody = response.body?.string() ?: "Empty response body"
-                callback(responseBody)
-            } catch (e: IOException) {
-                callback("Error: ${e.message}")
-            }
-        }
-    }
 
-
-
-    private fun makeRequest(): Response {
-        val request = Request.Builder()
-            .url("https://sportapi7.p.rapidapi.com/api/v1/sport/boxing")
-            .get()
-            .addHeader("X-RapidAPI-Key", "6c29ff6d27msha0ef5ed8e903aa6p1293f8jsn1955f2f381e5")
-            .addHeader("X-RapidAPI-Host", "sportapi7.p.rapidapi.com")
-            .build()
-        return client.newCall(request).execute()
-    }
 
     fun getSchedule(league: String, year: String): String {
         Log.d("definitiva",year)

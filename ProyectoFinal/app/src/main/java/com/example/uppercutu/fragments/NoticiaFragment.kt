@@ -42,12 +42,10 @@ class NoticiaFragment : Fragment() {
 
         val urlTextView = view.findViewById<TextView>(R.id.urlNoticia)
         urlTextView.setOnClickListener {
-            // Abrir la URL en un navegador web
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(article.url))
             startActivity(intent)
         }
 
-        // Cargar la imagen del artículo usando Glide
         Glide.with(this)
             .load(article.urlToImage)
             .error(R.drawable.uppercutu) // Imagen de error por si no se puede cargar la imagen

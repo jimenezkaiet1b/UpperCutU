@@ -1,5 +1,6 @@
 package com.example.uppercutu.adapters
 
+import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -9,19 +10,16 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.uppercutu.R
+import com.example.uppercutu.api.ImageUrlStorage
 import com.example.uppercutu.api.RetrofitInstance
 import com.example.uppercutu.api.SearchResponse
-import com.example.uppercutu.api.UnsplashApiService
 import com.example.uppercutu.modelo.fighters.Fighter
 import com.example.uppercutu.util.Constants
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class FightersAdapter(private var fightersList: List<Fighter>) :
+class FightersAdapter(private var fightersList: List<Fighter>, private val context: Context) :
     RecyclerView.Adapter<FightersAdapter.FightersViewHolder>() {
 
     class FightersViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -45,31 +43,33 @@ class FightersAdapter(private var fightersList: List<Fighter>) :
         holder.fighterWeightClassTextView.text = currentItem.weightClass
         holder.fighterDateTextView.text = currentItem.date
 
-        // Fetch and load image using Google Custom Search API and Glide
-        currentItem.imageUrl?.let { imageUrl ->
-            Glide.with(holder.itemView.context).load(imageUrl).into(holder.fighterImageView)
-        } ?: run {
-            currentItem.name?.let {
+        val storedImageUrl = currentItem.name?.let { ImageUrlStorage.getImageUrl(context, it) }
+
+        if (storedImageUrl != null) {
+            Glide.with(holder.itemView.context).load(storedImageUrl).into(holder.fighterImageView)
+        } else {
+            currentItem.name?.let { name ->
                 RetrofitInstance.RetrofitInstance.api.searchImages(
                     Constants.API_KEYIMAGES,
                     Constants.CX_ID,
-                    it
+                    name
                 ).enqueue(object : Callback<SearchResponse> {
                     override fun onResponse(call: Call<SearchResponse>, response: Response<SearchResponse>) {
                         if (response.isSuccessful) {
                             val imageUrl = response.body()?.items?.firstOrNull()?.link ?: ""
                             currentItem.imageUrl = imageUrl
                             Glide.with(holder.itemView.context).load(imageUrl).into(holder.fighterImageView)
+                            ImageUrlStorage.saveImageUrl(context, currentItem.name, imageUrl)
                         }
                     }
 
                     override fun onFailure(call: Call<SearchResponse>, t: Throwable) {
+                        Log.e("FightersAdapter", "Error fetching image: ${t.message}")
                     }
                 })
             }
         }
     }
-
 
     override fun getItemCount(): Int {
         return fightersList.size
