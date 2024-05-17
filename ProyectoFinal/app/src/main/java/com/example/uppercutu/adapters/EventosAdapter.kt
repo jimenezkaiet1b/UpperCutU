@@ -6,11 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.Spinner
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uppercutu.R
 import com.example.uppercutu.modelo.events.EventosItem
 import com.example.uppercutu.modelo.news.Article
+import com.google.type.DateTime
 
 class EventosAdapter(
     private val context: Context,
@@ -27,6 +29,8 @@ class EventosAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val evento = eventosFiltrados[position]
         holder.eventoNombreTextView.text = evento.Name
+        holder.fechaTextView.text = evento.DateTime
+        holder.shortNameTextView.text = evento.ShortName
     }
 
     override fun getItemCount(): Int {
@@ -52,6 +56,8 @@ class EventosAdapter(
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val eventoNombreTextView: TextView = itemView.findViewById(R.id.even_name)
+        val fechaTextView: TextView = itemView.findViewById(R.id.dateTimeEvento)
+        val shortNameTextView: TextView = itemView.findViewById(R.id.shortName)
     }
 }
 
